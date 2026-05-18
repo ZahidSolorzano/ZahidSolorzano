@@ -38,6 +38,9 @@
 2.
 3. 
 
+**Expected Result:** User is redirected to products page  
+**Actual Result:** User is redirected to products page  
+**Status:** ✅ PASS
 ---
 
 
