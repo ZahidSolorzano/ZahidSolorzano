@@ -43,7 +43,7 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 - 🐞 Found and reported 3 bugs
 - 📸 Documented with screenshots
 
-🐞 [View bug reports](./project-1-login/test-plan.md)
+🎫 [View test plan](./project-1-login/test-plan.md)
 📄 [View test cases](./project-1-login/test-cases.md)  
 🐞 [View bug reports](./project-1-login/bugs.md)
 
