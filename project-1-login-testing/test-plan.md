@@ -6,7 +6,7 @@
 
 ## Introduction
 
-The purpose of this document is to provide the information and framework required to plan and develop the testing process activities for the **login functionality** of the demo e-commerce site **SauceDemo** (https://www.saucedemo.com).
+The purpose of this document is to provide the information and framework required to plan and develop the testing process activities for the login functionality of the demo e-commerce site SauceDemo (https://www.saucedemo.com).
 This project is part of my portfolio as an aspiring Junior Tester, with the goal of demonstrating my manual testing skills to potential employers like BairesDev.
 
 ---
