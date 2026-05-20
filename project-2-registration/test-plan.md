@@ -42,7 +42,7 @@ The test will be considered completed when all planed test cases have been execu
 
 | Component | Details |
 |-----------|---------|
-| **Application URL** | https://www.saucedemo.com |
+| **Application URL** | (https://demoqa.com/automation-practice-form)|
 | **Browser** | Google Chrome Version 148.0.7778.178 |
 | **Operating System** | Windows10 |
 | **Network** | Home Wi-Fi  |
