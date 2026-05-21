@@ -7,7 +7,7 @@
 ## Introduction
 
 The purpose of this document is to provide the information and framework required to plan and develop the testing process activities for the login functionality of the demo e-commerce site SauceDemo (https://www.saucedemo.com).
-This project is part of my portfolio as an aspiring Junior Tester, with the goal of demonstrating my manual testing skills to potential employers like BairesDev.
+This project is part of my portfolio as an aspiring Junior Tester, with the goal of demonstrating my manual testing skills.
 
 ---
 ## Objective
@@ -16,44 +16,39 @@ Validate that the login functionality of SauceDemo works correctly for different
 ##  Scope
 
 ### In Scope 
-- Login with valid credentials (standard_user, problem_user, performance_glitch_user)
-- Login with locked_out_user (negative test)
-- Login with empty username/password
-- Login with invalid username/password
+- Login with valid credentials.
+- Login with locked out user 
+- Login with empty username and password
+- Login with invalid username and password
 - Error messages for each failure scenario
 - Page redirect after successful login
 
 ### Out of Scope 
-- Password recovery / "Forgot password" 
+- Password recovery or "Forgot password" 
 - Remember me functionality 
 - Login via social media 
-- Performance / load testing 
+- Performance or load testing 
 - Security testing
 
 ## Team
-Since this test plan is part of a personal project aimed at demonstrating software testing skills, the only person involved in its entire development is Zahid Solorzano
+Since this test plan is part of a personal project aimed at demonstrating software testing skills, the only person involved in the development is Zahid Solorzano
 
 ## Test Strategy
 
-The following table describes the testing approach for this project:
-
-| Test Level | Test Types | Test Techniques | Manual or Automated |
-|------------|------------|----------------|---------------------|
-| System Testing, UI Testing | Functional, Negative, Usability | Black box, Equivalence partitioning, Boundary value analysis | Manual |
+| Test Level | Test Type | Test Techniques | Manual or Automated |
+|------------|----------|-------| ------|
+|System testing, user interface testing | Functional, Black box | Equivalance Partitioning, Boundary value analysis, Decision tables | Manual |
 
 
 ## Criteria
 
 ### Start Criteria
-Test execution will begin as soon as:
-- Test cases have been designed and reviewed
-- The test environment is ready (browser, internet connection)
-
+Test execution will begin as soon as the test cases have been designed and reviewed and the test environment is ready.
 ### Exit Criteria
 The testing process will be considered COMPLETE when:
-- All planned test cases have been executed (8/8)
-- All found defects have been documented (2/2 reported)
-- Test evidence (screenshots) has been captured
+- All planned test cases have been executed 
+- All found defects have been documented
+- Test evidence has been captured
 - This test plan has been completed
 
 ## Test Environment
@@ -61,7 +56,7 @@ The testing process will be considered COMPLETE when:
 | Component | Details |
 |-----------|---------|
 | **Application URL** | https://www.saucedemo.com |
-| **Browser** | Google Chrome ( |
+| **Browser** | Google Chrome Version 148.0.7778.179 |
 | **Operating System** | Windows10 |
 | **Network** | Home Wi-Fi  |
 | **Device** |  Desktop |
@@ -70,29 +65,23 @@ The testing process will be considered COMPLETE when:
 ---
 
 ## Test Deliverables 
+- Test Plan 
+- Test Cases 
+- Bug Report
+- Test Evidence  
 
-| Document | Status | Location |
-|----------|--------|----------|
-| Test Plan | Completed | `test-plan.md` |
-| Test Cases | Completed (8 cases) | `test-cases.md` |
-| Bug Report | Completed (2 bugs) | `bug-report.md` |
-| Test Evidence  | Completed | `evidence/` folder |
-
-## Risks & Mitigation
-
-| Risk | Likelihood | Mitigation |
-|------|-----------|------------|
-| Demo application changes without notice | Low | Document the date of testing; note if issues appear |
-| Network issues affecting response time | Medium | Note network conditions in bug report |
-| Browser-specific issues | Low | Tested only on Chrome; mention in scope |
+## Risks and Mitigation
+| Risks | Likelihood | Mitigation |
+|------|------|----|
+|Failure to complete test design and execution within the stablished timeframe| Low | Conduct a dayly follow of activities done and pending to do|
 
 ## Timeline
 | Day | Tasks |
 |-----|-------|
 | Day 1 | Task 1: Test Plan |
 | Day 2 | Task 2: Test Cases design |
-| Day 3 | Task 3 + 4: Environment setup + Execution |
-| Day 4 | Task 5 + 6: Bug reporting + Evidence |
+| Day 3 | Task 3 and 4: Environment setup and Execution |
+| Day 4 | Task 5 and 6: Bug reporting and Evidence |
 | Day 6 | Task 7: Final review and upload |
 
 
