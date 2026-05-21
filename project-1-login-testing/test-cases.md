@@ -26,48 +26,33 @@
 |**Actual Result**|User is redirected to products page  
 |**Status**| PASS|
 
-
-
- 
-
-
 ---
 
 ### TC-03: Valid login with performance glitch user
 
 | Field | Value |
 |-------|-------|
-| **Description** | Verify performance_glitch_user can login (may have delay) |
+| **Description** | Verify performance_glitch_user can login |
 | **Preconditions** | User is on login page |
-| **Test Data** | Username: `performance_glitch_user`, Password: `secret_sauce` |
-
-**Steps:**
-1. Enter username `performance_glitch_user`
-2. Enter password `secret_sauce`
-3. Click "Login" button
-
-**Expected Result:** User is redirected to products page (may take a few seconds)  
-**Actual Result:** User is redirected to products page after ~5 second delay  
-**Status:** ✅ PASS (with observation)
+| **Test Data** | Username: "performance_glitch_user", Password: "secret_sauce" |
+|**Steps**| 1. Enter username !performance_glitch_user" 2. Enter password "secret_sauce" 3. Click "Login" button|
+|**Expected Result**| User is redirected to products page|
+|**Actual Result**| User is redirected to products page after a 5 second delay  |
+|**Status**| PASS |
 
 ---
 
-### TC-04: Login with locked out user (negative test)
+### TC-04: Login with locked out user
 
 | Field | Value |
 |-------|-------|
 | **Description** | Verify locked_out_user cannot login and sees error message |
 | **Preconditions** | User is on login page |
 | **Test Data** | Username: `locked_out_user`, Password: `secret_sauce` |
-
-**Steps:**
-1. Enter username `locked_out_user`
-2. Enter password `secret_sauce`
-3. Click "Login" button
-
-**Expected Result:** Error message appears: "Epic sadface: Sorry, this user has been locked out."  
-**Actual Result:** Error message appears as expected  
-**Status:** ✅ PASS
+|**Steps:** |1. Enter username `locked_out_user`2. Enter password `secret_sauce` 3. Click "Login" button|
+|**Expected Result:** |Error message appears: "Epic sadface: Sorry, this user has been locked out."  |
+|**Actual Result:**| Error message appears as expected  |
+|**Status:** |PASS|
 
 ---
 
