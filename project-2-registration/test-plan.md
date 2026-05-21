@@ -5,28 +5,28 @@
 **Date:** 05/18/2026
 
 ## Introduction
-The porpose of this project is to provide information and framework requiered to plan and develop the testing process activities for the registration form functionality of the demosite webpage.
+The purpose of this project is to provide information and framework required to plan and develop the testing process activities for the registration form functionality of the demosite webpage.
 
 ## Objective 
-Validate that all the fields on the registration form works properly, that the non necesary fields can be leaved in blank and that it shows clear error messages.
+Validate that all the fields on the registration form works properly, that the non necesary fields can be left in blank and that it shows clear error messages.
 
 ## Scope
 
 ### In Scope
-- Summit the form with valid credentials and information
-- Summit the form with empty fields
+- Submit the form with valid credentials and information
+- Submit the form with empty fields
 - Test if the form allows special characters
-- Test the functionality of the summit and close buttons
-- Page shows the proper message after summiting a form
+- Test the functionality of the submit and close buttons
+- Page shows the proper message after submiting a form
 
 ### Out of Scope
 - Autofill the form
 - Intrgration testing
-- Performance testinh
+- Performance testing
 - Security testing
 
 ## Team
-Since this is a personal project ment to show my software testing skills, the only person involved is Zahid Solorzano.
+Since this is a personal project meant to show my software testing skills, the only person involved is Zahid Solorzano.
 
 ## Test Strategy
 
@@ -36,7 +36,7 @@ Since this is a personal project ment to show my software testing skills, the on
 
 ## Criteria
 The test execution will start as soon as all the test cases are designed and reviewed and the test environment is ready.
-The test will be considered completed when all planed test cases have been executed, all found defects has been documented, the evidence has been captured and this test plan has been completed
+The test will be considered completed when all planned test cases have been executed, all found defects has been documented, the evidence has been captured and this test plan has been completed
 
 ## Test Environment
 
@@ -58,7 +58,7 @@ The test will be considered completed when all planed test cases have been execu
 ## Risks and Mitigation
 | Risks | Likelihood | Mitigation |
 |------|------|----|
-|Failure to complete test design and execution within the stablished timeframe| Low | Conduct a dayly follow of activities done and pending to do|
+|Failure to complete test design and execution within the established timeframe| Low | Conduct a daily follow of activities done and pending to do|
 
 ## Timeline
 | Day | Tasks |
