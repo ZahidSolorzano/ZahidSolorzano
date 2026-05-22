@@ -92,17 +92,17 @@
 
 **Expected Result:** 
 - Form not submited
-- Required fields apear with a red outline
+- Required fields appear with a red outline
 
 **Actual Result:** 
 - Form not submited
-- Required fields apear with a red outlinen
+- Required fields appear with a red outlinen
 
 **Status:** PASS
 
 ---
 
-### TC-04: Submiting form filling the fields with a big a mount of characters
+### TC-04: Character limit validation on all text fields
 
 **Description:** User cannot successfully submit the registration form because one of the requiered fields allows to be filled with infinite characters
 
