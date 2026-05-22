@@ -45,6 +45,8 @@
 
 **Status:** PASS
 
+---
+
 ### TC-02: Valid submit by filling only the required fields
 
 **Description:** User can successfully submit the registration form by filling only the required fields with valid data.
@@ -77,6 +79,8 @@
 
 **Status:** PASS
 
+---
+
 ### TC-03: Invalid submit by not filling any of the fields
 
 **Description:** User cannot successfully submit the registration form by leaving in blank all the fields.
@@ -96,4 +100,43 @@
 
 **Status:** PASS
 
+---
+
 ### TC-04: Submiting form filling the fields with a big a mount of characters
+
+**Description:** User cannot successfully submit the registration form because one of the requiered fields allows to be filled with infinite characters
+
+**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+
+
+**Test Data:**
+- First Name: "Carlos"
+- Last Name: "Solorzano" 
+- Gender: "Male"
+- Mobile: "4521690129"
+- Date of Birth: "12 Oct 2000"
+- Current Address: "Marquesa 35"
+
+**Steps:**
+1. Enter First Name: "Carlos" then continuesly press o
+2. Enter Last Name: "Solorzano"  then continuesly press s
+3. Select Gender: "Male"
+4. Enter Mobile: "4431234567" then contiunuesly press 9
+5. Enter Date of Birth: "12 Oct 2000"
+6. Enter Address marquesa 35 then continuesly press 5
+7. Click Submit button
+
+**Expected Result:** 
+- Form is no submitted successfully
+- A modal window appears showing that fields have a character limit
+**Actual Result:**
+  
+- Form submitted successfully
+- First name , last name, email and adress have no character limit
+
+**Status:** PASS
+
+---
+
+
+
