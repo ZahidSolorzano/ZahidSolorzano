@@ -104,37 +104,38 @@
 
 ### TC-04: Character limit validation on all text fields
 
-**Description:** User cannot successfully submit the registration form because one of the requiered fields allows to be filled with infinite characters
+**Description:**  Verify if text fields  have character limits or handle long input correctly.
 
 **Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
 
-
 **Test Data:**
-- First Name: "Carlos"
-- Last Name: "Solorzano" 
+- First Name: "Carlos" then 500 times"s"
+- Last Name: "Solorzano" then 500 times "o"
+- Email: "elcapuleto705@gmail.com" then 500 times "m"
 - Gender: "Male"
-- Mobile: "4521690129"
 - Date of Birth: "12 Oct 2000"
-- Current Address: "Marquesa 35"
+- Mobile: "1234567890" then 500 times "0"  
+- Address: "Marquesa 35" then 500 times "a"
 
 **Steps:**
-1. Enter First Name: "Carlos" then continuesly press o
-2. Enter Last Name: "Solorzano"  then continuesly press s
-3. Select Gender: "Male"
-4. Enter Mobile: "4431234567" then contiunuesly press 9
-5. Enter Date of Birth: "12 Oct 2000"
-6. Enter Address marquesa 35 then continuesly press 5
-7. Click Submit button
+1. Enter First Name: "Carlos" then continuously press "s"
+2. Enter Last Name: "Solorzano"  then continuously press "o"
+3. Enter Email "elcapuleto705@gmail.com" then continuously press "m"
+4. Select Gender: "Male"
+5. Enter Mobile: "1234567890" then continuously press "0"
+6. Enter Date of Birth: "12 Oct 2000"
+7. Enter Address marquesa 35 then continuously press "a"
+8. Click Submit button
 
 **Expected Result:** 
-- Form is no submitted successfully
-- A modal window appears showing that fields have a character limit
-**Actual Result:**
-  
-- Form submitted successfully
-- First name , last name, email and adress have no character limit
+The system must handle long input in some way like reject with an error message, or truncate automatically, or show a limit warning
 
-**Status:** PASS
+**Actual Result:**
+- Mobile only accepted the first 10 digits so the rest were ignored
+- Email only accepted a maximon of 5 characters after the last dot
+- First name, last name and address accepted more than 500 characters so there is no limit
+
+**Status:** FAIL
 
 ---
 
