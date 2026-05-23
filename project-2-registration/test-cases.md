@@ -139,5 +139,33 @@ The system must handle long input in some way like reject with an error message,
 
 ---
 
+### TC-05: Email field - character limit in the domain part (before .com)
+
+**Description:** Verify that the Email field limits the number of characters allowed in the domain section. Between "@" and the last dot before ".com".
+
+**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+
+**Test Data:**
+- 60 characters then "@gmail.com"
+- "test@" then 60 characters and then ".com"
+
+
+**Steps:**
+1. Enter valid data in all required fields
+2. Enter Email with 60+ characters BEFORE the "@"
+3. Click Submit and observe
+4. Repeat with 60+ characters AFTER "@" but BEFORE ".com"
+5. Click Submit and observe
+
+**Expected Result:** 
+The system must handle long input in some way like reject with an error message, or truncate automatically, or show a limit warning
+
+**Actual Result:**
+- Before "@" field has no character limit
+- After "@" but before ".com" field has no character limit
+
+**Status:** FAIL 
+
+---
 
 
