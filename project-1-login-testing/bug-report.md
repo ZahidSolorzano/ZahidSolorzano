@@ -1,6 +1,6 @@
 # Bug Report - Login Functionality
 
-### BUG-02: Error message missing password requirement when both fields empty
+### BUG-01: Error message missing password requirement when both fields empty
 
 | Field | Value |
 |-------|-------|
