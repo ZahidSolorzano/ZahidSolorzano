@@ -1,7 +1,5 @@
 # Bug Report - Login Functionality
 
-## Bug Details
-
 ### BUG-01: Performance issue with "performance_glitch_user"
 
 | Field | Value |
