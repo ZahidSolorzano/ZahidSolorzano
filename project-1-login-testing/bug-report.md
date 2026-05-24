@@ -1,20 +1,18 @@
 # Bug Report - Login Functionality
 
-### BUG-01: Performance issue with "performance_glitch_user"
+### BUG-02: Error message missing password requirement when both fields empty
 
 | Field | Value |
 |-------|-------|
-|**Test Case** | TC-03: Valid login with performance glitch user |
-| **Description** | When logging in with "performance_glitch_user", the redirect to the products page takes significantly longer than other users (approximately 5 seconds) |
-| **Preconditions** | User is on login page |
-| **Test Data** | Username: "performance_glitch_user", Password: "secret_sauce" |
-| **Steps** | 1. Enter username "performance_glitch_user" <br> 2. Enter password "secret_sauce" <br> 3. Click "Login" button |
-| **Expected Result** | User is redirected to products page |
-| **Actual Result** | User is redirected to products page after a 5 second delay |
-| **Module** | Login |
-| **Severity** | Low |
+| **Related Test Case** | TC-09: Login with all empty fields|
+| **Description** | When both username and password fields are left empty and user clicks Login, the error message only mentions missing username. It does not mention that password is also required. |
+| **Preconditions** | User is on login page (https://www.saucedemo.com) |
+| **Steps** | 1. Leave username field empty <br> 2. Leave password field empty <br> 3. Click "Login" button |
+| **Expected Result** | Error message should indicate both fields are required  |
+| **Actual Result** | Error message appears: "Epic sadface: Username is required" |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Minor |
 | **Priority** | Medium |
-| **Enviromet** | Windows 10 Desktop, Google Chrome |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 
