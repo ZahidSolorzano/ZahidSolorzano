@@ -15,7 +15,7 @@
 | **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
-| **Evidence:** | ![empty-fields-error](./evidence/Error message missing.png) |
+| **Evidence:** | ![Errro-message-missing](./evidence/Error-message-missing.png) |
 
 
 ---
