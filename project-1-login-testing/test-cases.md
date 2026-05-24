@@ -31,7 +31,7 @@
 
 | Field | Value |
 |-------|-------|
-| **Description** | Verify performance_glitch_user can login (may have delay) |
+| **Description** | Verify performance_glitch_user can login |
 | **Preconditions** | User is on login page |
 | **Test Data** | Username: "performance_glitch_user", Password: "secret_sauce" |
 | **Steps** | 1. Enter username "performance_glitch_user" <br> 2. Enter password "secret_sauce" <br> 3. Click "Login" button |
@@ -39,7 +39,7 @@
 | **Actual Result** | User is redirected to products page after a 5 second delay |
 | **Status** | PASS|
 |**Priority** | HIGH |
-
+|**Note:** | The 5-second delay is the intended behavior for this test account, not a bug. |
 ---
 
 ### TC-04: Login with locked out user
@@ -54,6 +54,7 @@
 | **Actual Result** | Error message appears: "Epic sadface: Sorry, this user has been locked out." |
 | **Status** |  PASS |
 |**Priority** | HIGH |
+
 ---
 
 ### TC-05: Login with empty username
@@ -122,8 +123,9 @@
 | **Steps** | 1. Do not enter any data in any field  <br> 2. Click "Login" button |
 | **Expected Result** | Error message should indicate that both fields are required  |
 | **Actual Result** | Error message only says: "Username is required"|
-| **Status** | PASS |
+| **Status** | FAIL |
 |**Priority** | MEDIUM |
+| **Bug Reference | BUG-01 |
 ---
 
 ### TC-10: Password field masks characters
