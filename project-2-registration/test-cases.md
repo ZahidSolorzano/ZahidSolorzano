@@ -138,7 +138,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - First name field accepted very long text without any error
 
-**Status:** PASS **Priority:** LOW
+**Status:** FAIL **Priority:** LOW
 
 ---
 
@@ -165,7 +165,7 @@ For all test cases unless specified otherwise:
 - Form is submitted successfully
 - First name allows numeric characters.
 
-**Status:** PASS **Priority:** MEDIUM
+**Status:** FAIL **Priority:** HIGH
 
 ---
 
@@ -192,7 +192,7 @@ For all test cases unless specified otherwise:
 - Form is submitted successfully
 - First name allows special characters.
 
-**Status:** PASS  **Priority:** MEDIUM
+**Status:** FAIL  **Priority:** HIGH
 
 ---
 
@@ -217,7 +217,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name field accepted very long text without any error
 
-**Status:** PASS  **Priority:** LOW
+**Status:** FAIL  **Priority:** LOW
 
 ---
 
@@ -244,7 +244,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name allows numeric characters.
 
-**Status:** FAIL  **Priority:** MEDIUM
+**Status:** FAIL  **Priority:** HIGH
 
 ---
 
@@ -271,7 +271,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name field allows special characters.
 
-**Status:** PASS  **Priority:** MEDIUM
+**Status:** FAIL  **Priority:** HIGH
 
 ### TC-10 Email - Charcater limit in the local part
 
@@ -294,7 +294,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the local part
 
-**Status**: PASS **Priority:** MEDIUM
+**Status:** FAIL **Priority:** MEDIUM
 
 ### TC-11 Email - Charcater limit in the domain part
 
@@ -317,7 +317,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the domain part
 
-**Status:** PASS  **Priority:** MEDIUM
+**Status:** FAIL  **Priority:** MEDIUM
 
 ### TC-12 Email - Charcater limit in the top level domain part
 
@@ -665,7 +665,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Date of birth field allows future dates
 
-**Status:** PASS **Priority:** HIGH
+**Status:** FAIL **Priority:** HIGH
 
 ---
 
@@ -770,7 +770,7 @@ For all test cases unless specified otherwise:
 - User is allowed to upload non image files in the picture field
 - Form submitted successfully
 
-**Status:** PASS **Priority:** HIGH
+**Status:** FAIL **Priority:** HIGH
 
 ---
 
@@ -821,7 +821,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Address field accepted very long text without any error
 
-**Status:** PASS **Priority:** LOW
+**Status:** FAIL **Priority:** LOW
 
 ---
 ### TC-29: User can select a State without selecting a city
@@ -844,9 +844,9 @@ For all test cases unless specified otherwise:
 
 **Actual Result:**
 - Form submitted successfully
-- Summary window does not show neither the select State
+- Summary window does not show the selected State
 
-**Status:** PASS **Priority:** LOW
+**Status:** FAIL **Priority:** LOW
 
 ---
 
@@ -881,7 +881,7 @@ For all test cases unless specified otherwise:
 - Summary window cannot get closed by cliking the "Close" Button
 - Summary window can only get closed by clicking anywhere outside the window.
 
-**Status:** PASS **Priority:** HIGH
+**Status:** FAIL **Priority:** HIGH
 
 ---
 
