@@ -59,7 +59,30 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-02: Valid submit by filling only the required fields
+### TC-02: Submit with all fields empty
+
+**Description:** User cannot successfully submit the registration form by leaving in blank all the fields.
+
+**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+
+**Steps:**
+1. Do not enter any data in any field
+2. Click Submit button
+
+**Expected Result:** 
+- Form not submited
+- Required fields are highlighted with a red outline
+
+**Actual Result:** 
+- Form not submited
+- Required fields are highlighted with a red outline (first name, last name, gender, mobile abd date of birt)
+- Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
+
+**Status:** PASS
+
+---
+
+### TC-03: Valid submit by filling only the required fields
 
 **Description:** User can successfully submit the registration form by filling only the required fields with valid data.
 
@@ -87,29 +110,6 @@ For all test cases unless specified otherwise:
 **Actual Result:** 
 - Form submitted successfully
 - Summary window displayed with all data correctly shown
-- Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
-
-**Status:** PASS
-
----
-
-### TC-03: Submit with all fields empty
-
-**Description:** User cannot successfully submit the registration form by leaving in blank all the fields.
-
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
-
-**Steps:**
-1. Do not enter any data in any field
-2. Click Submit button
-
-**Expected Result:** 
-- Form not submited
-- Required fields are highlighted with a red outline
-
-**Actual Result:** 
-- Form not submited
-- Required fields are highlighted with a red outline (first name, last name, gender, mobile abd date of birt)
 - Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
 
 **Status:** PASS
@@ -173,7 +173,7 @@ The system must handle long input in some way like reject with an error message,
 
 ### TC-06: First Name - Reject special characters
 
-**Description:** Verify First Name field rejects input containing special characters
+**Description:** Verify that First Name field rejects input containing special characters
 
 **Preconditions:** 
 - Navigate to https://demoqa.com/automation-practice-form
@@ -287,14 +287,12 @@ The system must handle long input in some way like reject with an error message,
 
 **Test Data:** Email: (65 times "A") + "@example.com"
 
-
 **Steps:**
 - Enter valid data in all required fields
 - Enter 65 characters in Email fiel (type "A" 76 times before the @)
 - Click Submit button
 
-**Expected Result:**
-The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
+**Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
 **Actual Result:** 
 - Form is submited
@@ -315,8 +313,7 @@ The system must handle long input in some way like reject with an error message,
 - Enter "carlostest@" + (type 65 times "A") + ".com" in the email field
 - Click Submit button
 
-**Expected Result:**
-The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
+**Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
 **Actual Result:** 
 - Form is submited
@@ -336,9 +333,9 @@ The system must handle long input in some way like reject with an error message,
 - Email: "carlostest@example." + (65 times "A")
 
 **Steps:**
-- Enter valid data in all required fields
-- Enter "carlostest@example." + (type 65 times "A") in the email field
-- Click Submit button
+1. Enter valid data in all required fields
+2. Enter "carlostest@example." + (type 65 times "A") in the email field
+3. Click Submit button
 
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
@@ -362,9 +359,9 @@ The system must handle long input in some way like reject with an error message,
 - Email: "carlostest@example.m" 
 
 **Steps:**
-- Enter valid data in all required fields
-- Enter "carlostest@example.m" 
-- Click Submit button
+1. Enter valid data in all required fields
+2. Enter "carlostest@example.m"
+3. Click Submit button
 
 **Expected Result:** 
 - Form should not submit.
@@ -390,9 +387,9 @@ The system must handle long input in some way like reject with an error message,
 **Test Data:** Email: "@example.com" 
 
 **Steps:**
-- Enter valid data in all required fields 
-- Enter "@example.com" in the email field
-- Click Submit button
+1. Enter valid data in all required fields
+2. Enter "@example.com" in the email field
+3. Click Submit button
 
 **Expected Result:** 
 - Email field gets highlighted with a red outline
