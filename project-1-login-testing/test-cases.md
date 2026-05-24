@@ -42,7 +42,7 @@
 
 ---
 
-### TC-04: Login with locked out user (negative test)
+### TC-04: Login with locked out user
 
 | Field | Value |
 |-------|-------|
@@ -123,6 +123,20 @@
 | **Expected Result** | Error message should indicate that both fields are required  |
 | **Actual Result** | Error message only says: "Username is required"|
 | **Status** | PASS |
-|**Priority** | HIGH |
+|**Priority** | MEDIUM |
+---
+
+### TC-10: Password field masks characters
+
+| Field | Value |
+|-------|-------|
+| **Description** | Verify that password characters are masked (shown as dots or asteriks)|
+| **Preconditions** | User is on login page |
+| **Test Data** |  Password: "secret_sauce" |
+| **Steps** | 1. Enter password "secret_sauce" <br> 2. Observe Behavior|
+| **Expected Result** |  Password characters are masked |
+| **Actual Result** |  Password characters are masked (shown as dots) |
+| **Status** | PASS |
+|**Priority** | MEDIUM |
 ---
 
