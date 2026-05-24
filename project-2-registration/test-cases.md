@@ -347,7 +347,7 @@ The system must handle long input in some way like reject with an error message,
 
 ---
 
-### TC-13 Email -  Top level domain part has a minumum lenght of 2 character
+### TC-13 Email - Top level domain part has a minumum lenght of 2 character
 
 **Description:** Verify that the Email field in the Top level domain part has a minumum lenght of 2 character (like .us or .mx)
 
@@ -402,8 +402,115 @@ The system must handle long input in some way like reject with an error message,
 **Status:** PASS
 
 ---
+### TC-14 Email without the domain part
 
-### TC-10: User can select only one gender
+**Description:** Verify that the Email requires to have a valid domain part (after the @ before the dot)
+
+**Preconditions:** 
+- Navigate to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Email: "carlostest@.com" 
+
+**Steps:**
+1. Enter valid data in all required fields
+2. Enter "carlostest@.com" in the email field
+3. Click Submit button
+
+**Expected Result:** 
+- Email field gets highlighted with a red outline
+- Form should not submit.
+
+**Actual Result:** 
+- Email field gets highlighted with a red outline
+- Form cannot be submited
+
+**Status:** PASS
+
+---
+
+### TC-15  Email without the top level domain part
+
+**Description:** Verify that the Email requires to have a valid domain part (after thethe dot)
+
+**Preconditions:** 
+- Navigate to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Email: "carlostest@example." 
+
+**Steps:**
+1. Enter valid data in all required fields
+2. Enter "carlostest@.com" in the email field
+3. Click Submit button
+
+**Expected Result:** 
+- Email field gets highlighted with a red outline
+- Form should not submit.
+
+**Actual Result:** 
+- Email field gets highlighted with a red outline
+- Form cannot be submited
+
+**Status:** PASS
+
+---
+
+### TC-16  Email rejects special characters
+
+**Description:** Verify that the Email field rejects input containing special characters (besides "@" and ".")
+
+**Preconditions:** 
+- Navigate to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Email: "carlostest#$@example.com" 
+
+**Steps:**
+1. Enter valid data in all required fields
+2. Enter "carlostest#$@example.com" in the email field
+3. Click Submit button
+
+**Expected Result:** 
+- Email field gets highlighted with a red outline
+- Form should not submit.
+
+**Actual Result:** 
+- Email field gets highlighted with a red outline
+- Form cannot be submited
+
+**Status:** PASS
+
+---
+
+### TC-17  Email rejects numerical characters in the top level domain part
+
+**Description:** Verify that the Email field rejects input containing numerical characters in the top level domain part (after the dot)
+
+**Preconditions:** 
+- Navigate to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Email: "carlostest@example.com12" 
+
+**Steps:**
+1. Enter valid data in all required fields
+2. Enter "carlostest@example.com12" in the email field
+3. Click Submit button
+
+**Expected Result:** 
+- Email field gets highlighted with a red outline
+- Form should not submit.
+
+**Actual Result:** 
+- Email field gets highlighted with a red outline
+- Form cannot be submited
+
+**Status:** PASS
+
+---
+
+### TC-18: User can only select one gender
 
 **Description:** Verify that the gender field can be selected with one gender at a time.
 
@@ -422,120 +529,320 @@ The system must handle long input in some way like reject with an error message,
 3. Try to select a second Gender "Female"
 4. Click Submit button
 
-**Expected Result:**
--System should only allow user to highligh one gender of the gender list
+**Expected Result:** System should only allow user to highligh one gender of the gender list
 
-**Actual Result:**
--System only highlights the last gender that the user clicked
+**Actual Result:** System only highlights the last gender that the user clicked
 
-### TC-11: Mobile - Lenght (More than 10 digits)
+### TC-19: Mobile - Lenght (More than 10 digits)
 
 **Description:**  Verify Mobile field only accepts exactly 10 digits and ignores extra digits
 
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
 
-**Test Data:**
-- First Name: "Carlos"
-- Last Name: "Solorzano"
-- Gender: "Male"
-- Date of Birth: "12 Oct 2000"
-- Mobile: "12345678901"
+**Test Data:** Mobile: "12345678901"
 
 **Steps:**
-1. Enter valid data in all required fields (First Name, Last Name, Gender and Date of Birth)
-2. Enter  "12345678901" in Mobile field
+1. Enter valid data in all other required fields
+2. Enter "12345678901" in Mobile field
 3. Click Submit button
 
-**Expected Result:** 
--Should either truncate to 10 digits or show error message
+**Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
-**Actual Result:**
-Shows mobile field highlighted with a red outline and form cannot be submitted
+**Actual Result:** Shows mobile field highlighted with a red outline and form cannot be submitted
 
 **Status:** PASS
 
 ---
-### TC-11: Mobile - Lenght (More than 10 digits)
-
-**Description:**  Verify Mobile field only accepts exactly 10 digits and ignores extra digits
-
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
-
-**Test Data:**
-- First Name: "Carlos"
-- Last Name: "Solorzano"
-- Gender: "Male"
-- Date of Birth: "12 Oct 2000"
-- Mobile: "12345678901"
-
-**Steps:**
-1. Enter valid data in all required fields (First Name, Last Name, Gender and Date of Birth)
-2. Enter  "12345678901" in Mobile field
-3. Click Submit button
-
-**Expected Result:** 
--Should either truncate to 10 digits or show error message
-
-**Actual Result:**
-Shows mobile field highlighted with a red outline and form cannot be submitted
-
-**Status:** PASS
-
----
-
-### TC-11: Mobile - Lenght Less than 10 digits)
+### TC-20: Mobile - Lenght (Less than 10 digits)
 
 **Description:**  Verify Mobile field only accepts exactly 10 digits 
 
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
 
-**Test Data:**
-- First Name: "Carlos"
-- Last Name: "Solorzano"
-- Gender: "Male"
-- Date of Birth: "12 Oct 2000"
-- Mobile: "123456789"
+**Test Data:** Mobile: "123456789"
 
 **Steps:**
-1. Enter valid data in all required fields (First Name, Last Name, Gender and Date of Birth)
-2. Enter  "123456789" in Mobile field
+1. Enter valid data in all other required fields
+2. Enter "123456789" in Mobile field
 3. Click Submit button
 
 **Expected Result:** 
--Should show error message or hightligt the field
+- Email field gets highlighted with a red outline
+- Form should not submit
 
-**Actual Result:**
-Shows mobile field highlighted with a red outline and form cannot be submitted
+**Actual Result:** 
+- Shows mobile field highlighted with a red outline 
+- Form cannot be submitted
 
 **Status:** PASS
 
 ---
-### TC-04d: Character limit - Address
 
-**Description:** Verify that the address field has a character limit or handles very long input appropriately
+### TC-21: Mobile field rejects non numerical character
 
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+**Description:**  Verify Mobile field only accepts numerical characters and ignores non numerical character
 
-**Test Data:**
-- First Name: "Carlos"
-- Last Name: "Solorzano"
-- Gender: "Male"
-- Mobile: "1234567890"
-- Date of Birth: "12 Oct 2000"
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
+
+**Test Data:** Mobile: "123456789A"
 
 **Steps:**
-1. Enter valid data in all required fields (First Name, Last Name, Gender, Mobile and Date of Birth)
-2. Enter 500 characters in address field (type "C" 500 times)
+1. Enter valid data in all other required fields
+2. Enter "123456789A" in Mobile field
 3. Click Submit button
 
 **Expected Result:** 
-The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
+- Email field gets highlighted with a red outline
+- Form should not submit
+
+**Actual Result:** 
+- Shows mobile field highlighted with a red outline 
+- Form cannot be submitted
+
+**Status:** PASS
+
+---
+
+### TC-22: Mobile field rejects special characters
+
+**Description:**  Verify Mobile field only accepts numerical characters and ignores special characters
+
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
+
+**Test Data:** Mobile: "123456789@"
+
+**Steps:**
+1. Enter valid data in all other required fields
+2. Enter "123456789@" in Mobile field
+3. Click Submit button
+
+**Expected Result:** 
+- Mobile field gets highlighted with a red outline
+- Form should not submit
+
+**Actual Result:** 
+- Mobile field gets highlighted with a red outline
+- Form cannot be submitted
+
+**Status:** PASS
+
+---
+
+
+### TC-23: Date of birth field rejects future dates
+
+**Description:**  Verify Mobile field only accepts numerical characters and ignores special characters
+
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
+
+**Test Data:** Date of birt: 05/24/2026
+
+**Steps:**
+1. Enter valid data in all other required fields
+2. Select "05/24/2026" in Date of birt field
+3. Click Submit button
+
+**Expected Result:** 
+- Date of birth field gets highlighted with a red outline
+- Form should not submit
+
+**Actual Result:** 
+- Form can be submitted
+- Date of birth field allows future dates
+
+**Status:** PASS
+
+---
+
+### TC-24: User can select multiple subjects
+
+**Description:**  Verify that the user is allowed to select multiple subject
+
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
+
+**Test Data:** Subjects: English, Maths, Civics and Arts
+
+**Steps:**
+1. Enter valid data in all other required fields
+2. Select the subjects English, Maths, Civics and Arts
+3. Click Submit button
+
+**Expected Result:** 
+- User is allowed to select multiple subject
+- Form should be submited
+
+**Actual Result:** 
+- User is allowed to select multiple subject
+- Form should be submited
+
+**Status:** PASS
+
+---
+
+### TC-25: User cannot select a non existing subject
+
+**Description:**  Verify that the user is not allowed to select a subject that is not on the database
+
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
+
+**Test Data:** Subjects: Astrology
+
+**Steps:**
+1. Enter valid data in all other required fields
+2. Enter Astrology in the subject field
+3. Click Submit button
+
+**Expected Result:** 
+- Subject field gets highlighted with a red outline
+- Form should not submit
+
+**Actual Result:** System deletes the subject whenever the user clicks outside the field and before they can submit the form
+
+
+**Status:** PASS
+
+---
+
+### TC-26: User can select multiple hobbies
+
+**Description:**  Verify that the user is allowed to select multiple hobbies
+
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Hobbies: Sports, Reading, Music
+
+**Steps:**
+1. Enter valid data in allrequired fields
+2. Click the box for all the hobbies available on the form (Sports, Reading, Music)
+3. Click Submit button
+
+**Expected Result:** 
+- User is allowed to select multiple hobbies
+- Form should be submited
+
+**Actual Result:** 
+- User is allowed to select multiple hobbies
+- Form gets submited
+
+**Status:** PASS
+
+---
+
+### TC-26: Picture field can only allow image formats
+
+**Description:**  Verify that the picture field can only be used to upload images
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Picture: example.mp4
+
+**Steps:**
+1. Enter valid data in allrequired fields
+2. Upload example.mp4 in the picture field
+3. Click Submit button
+
+**Expected Result:** 
+- Picture field is highlighted with a red outline or shows a warning message
+- Form should not be submited
+
+**Actual Result:** 
+- User is allowed to upload non image files in the picture field
+- Form gets submited
+
+**Status:** PASS
+
+---
+
+### TC-27: Picture field allow different image formats
+
+**Description:**  Verify that the picture field can be used to upload images in diferent formats (jpg, png, gif, webm, etc)
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Picture: cat.gif
+
+**Steps:**
+1. Enter valid data in allrequired fields
+2. Upload cat.gif in the picture field
+3. Click Submit button
+
+**Expected Result:** 
+- User is allowed to upload images with diferent formats
+- Form should be submited
+
+**Actual Result:** 
+- User is allowed to upload images with diferent formats
+- Form gets submited
+
+**Status:** PASS
+
+---
+
+### TC-28: Address - Character limit 
+
+**Description:** Verify that the address field has a character limit or handles very long input appropriately
+
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** Adress: Type "C" 500 times
+
+**Steps:**
+1. Enter valid data in all required fields
+2. Enter 500 characters in address field (type "C" 500 times)
+3. Click Submit button
+
+**Expected Result:**  The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
 **Actual Result:**
 - Form submitted successfully
 - Address field accepted very long text without any error
 
-**Status:** FAIL
+**Status:** PASS
+
+---
+### TC-29: User can select a State without selecting a city
+
+**Description:**  Since the City and State field are consider optional, the user should be able to select a state and ignore the city field
+
+**Preconditions:** 
+- User has navigated to https://demoqa.com/automation-practice-form
+- All required fields filled with valid defaults
+
+**Test Data:** State: "NCR"
+
+**Steps:**
+1. Enter valid data in all required fields
+2. Select "NCR" in the State field
+3. Click Submit button
+
+**Expected Result:**  
+- Form submitted successfully
+
+**Actual Result:**
+- Form submitted successfully
+- Summary window does not show neither the select State
+
+**Status:** PASS
 
 ---
 
