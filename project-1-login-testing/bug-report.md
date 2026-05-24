@@ -4,35 +4,19 @@
 
 | Field | Value |
 |-------|-------|
+|**Test Case** | TC-03: Valid login with performance glitch user |
+| **Description** | When logging in with "performance_glitch_user", the redirect to the products page takes significantly longer than other users (approximately 5 seconds) |
+| **Preconditions** | User is on login page |
+| **Test Data** | Username: "performance_glitch_user", Password: "secret_sauce" |
+| **Steps** | 1. Enter username "performance_glitch_user" <br> 2. Enter password "secret_sauce" <br> 3. Click "Login" button |
+| **Expected Result** | User is redirected to products page |
+| **Actual Result** | User is redirected to products page after a 5 second delay |
+| **Module** | Login |
 | **Severity** | Low |
 | **Priority** | Medium |
+| **Enviromet** | Windows 10 Desktop, Google Chrome |
 | **Status** | Open |
-| **Module** | Login |
 | **Reported By** | Zahid Solorzano |
-
-**Title:** Login takes approximately 5 seconds for performance_glitch_user
-
-**Description:**  
-When logging in with `performance_glitch_user`, the redirect to the products page takes significantly longer than other users (approximately 5 seconds vs <1 second for standard_user).
-
-**Steps to Reproduce:**
-1. Go to login page (https://www.saucedemo.com)
-2. Enter username: `performance_glitch_user`
-3. Enter password: `secret_sauce`
-4. Click "Login" button
-5. Observe loading time
-
-**Expected Result:**  
-Page redirects within 1-2 seconds, similar to standard_user
-
-**Actual Result:**  
-Page takes approximately 5 seconds to redirect after clicking login
-
-**Evidence:**  
-![performance-bug](./evidence/performance-glitch-timing.png)
-
-**Additional Info:**  
-This may be intentional (simulating a user with network issues), but worth documenting.
 
 ---
 
