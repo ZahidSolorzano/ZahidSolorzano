@@ -56,7 +56,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Summary window displayed with all data correctly shown
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -79,7 +79,7 @@ For all test cases unless specified otherwise:
 - Required fields are highlighted with a red outline (first name, last name, gender, mobile abd date of birt)
 - Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -113,7 +113,7 @@ For all test cases unless specified otherwise:
 - Summary window displayed with all data correctly shown
 - Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -138,7 +138,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - First name field accepted very long text without any error
 
-**Status:** FAIL
+**Status:** PASS **Priority:** LOW
 
 ---
 
@@ -165,7 +165,7 @@ For all test cases unless specified otherwise:
 - Form is submitted successfully
 - First name allows numeric characters.
 
-**Status:** PASS
+**Status:** PASS **Priority:** MEDIUM
 
 ---
 
@@ -192,7 +192,7 @@ For all test cases unless specified otherwise:
 - Form is submitted successfully
 - First name allows special characters.
 
-**Status:** PASS
+**Status:** PASS  **Priority:** MEDIUM
 
 ---
 
@@ -217,7 +217,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name field accepted very long text without any error
 
-**Status:** PASS
+**Status:** PASS  **Priority:** LOW
 
 ---
 
@@ -244,7 +244,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name allows numeric characters.
 
-**Status:** FAIL
+**Status:** FAIL  **Priority:** MEDIUM
 
 ---
 
@@ -271,7 +271,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name field allows special characters.
 
-**Status:** FAIL
+**Status:** PASS  **Priority:** MEDIUM
 
 ### TC-10 Email - Charcater limit in the local part
 
@@ -294,6 +294,8 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the local part
 
+**Status**: PASS **Priority:** MEDIUM
+
 ### TC-11 Email - Charcater limit in the domain part
 
 **Description:** Verify that the Email field has a character limit or handles very long input appropriately in the domain part (after the @ and beforer the last dot)
@@ -315,7 +317,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the domain part
 
-**Status:** PASS
+**Status:** PASS  **Priority:** MEDIUM
 
 ### TC-12 Email - Charcater limit in the top level domain part
 
@@ -340,7 +342,7 @@ For all test cases unless specified otherwise:
 - Email field has a 5 character limit in the top level domain part
 - Form cannot be submited
 
-**Status:** PASS
+**Status:** PASS **Priority:** MEDIUM
 
 ---
 
@@ -369,7 +371,7 @@ For all test cases unless specified otherwise:
 - Email field has a 2 character minimun in the top level domain part
 - Form cannot be submited
 
-**Status:** PASS
+**Status:** PASS **Priority:** MEDIUM
 
 ---
 
@@ -396,7 +398,7 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 ### TC-14 Email without the domain part
@@ -422,7 +424,7 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -449,7 +451,7 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -476,7 +478,7 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -503,7 +505,7 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS
+**Status:** PASS **Priority:** MEDIUM
 
 ---
 
@@ -531,7 +533,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** System only highlights the last gender that the user clicked
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -556,7 +558,7 @@ For all test cases unless specified otherwise:
 - Shows mobile field highlighted with a red outline and
 - Form cannot be submitted
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 ### TC-20: Mobile - Lenght (Less than 10 digits)
@@ -582,7 +584,7 @@ For all test cases unless specified otherwise:
 - Shows mobile field highlighted with a red outline 
 - Form cannot be submitted
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -609,7 +611,7 @@ For all test cases unless specified otherwise:
 - Shows mobile field highlighted with a red outline 
 - Form cannot be submitted
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -636,7 +638,7 @@ For all test cases unless specified otherwise:
 - Mobile field gets highlighted with a red outline
 - Form cannot be submitted
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -663,7 +665,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Date of birth field allows future dates
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -690,7 +692,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - User is allowed to select multiple subjects
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -715,7 +717,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** System deletes the subject whenever the user clicks outside the field and before they can submit the form
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -742,7 +744,7 @@ For all test cases unless specified otherwise:
 - User is allowed to select multiple hobbies
 - Form submitted successfully
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -768,7 +770,7 @@ For all test cases unless specified otherwise:
 - User is allowed to upload non image files in the picture field
 - Form submitted successfully
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -794,7 +796,7 @@ For all test cases unless specified otherwise:
 - User is allowed to upload images with diferent formats
 - Form submitted successfully
 
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
@@ -819,7 +821,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Address field accepted very long text without any error
 
-**Status:** PASS
+**Status:** PASS **Priority:** LOW
 
 ---
 ### TC-29: User can select a State without selecting a city
@@ -844,7 +846,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Summary window does not show neither the select State
 
-**Status:** PASS
+**Status:** PASS **Priority:** LOW
 
 ---
 
@@ -879,10 +881,7 @@ For all test cases unless specified otherwise:
 - Summary window cannot get closed by cliking the "Close" Button
 - Summary window can only get closed by clicking anywhere outside the window.
 
-**Status:** PASS
-
----
-**Status:** PASS
+**Status:** PASS **Priority:** HIGH
 
 ---
 
