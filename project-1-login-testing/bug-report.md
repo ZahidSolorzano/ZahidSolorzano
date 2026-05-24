@@ -11,7 +11,7 @@
 | **Expected Result** | Error message should indicate both fields are required  |
 | **Actual Result** | Error message appears: "Epic sadface: Username is required" |
 | **Environment** | Windows 10, Google Chrome |
-| **Severity** | Minor |
+| **Severity** | Low |
 | **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
