@@ -76,7 +76,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Form not submited
-- Required fields are highlighted with a red outline (first name, last name, gender, mobile abd date of birt)
+- Required fields are highlighted with a red outline (first name, last name, gender, mobile and date of birt)
 - Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
 
 **Status:** PASS **Priority:** HIGH
@@ -165,7 +165,7 @@ For all test cases unless specified otherwise:
 - Form is submitted successfully
 - First name allows numeric characters.
 
-**Status:** FAIL **Priority:** HIGH
+**Status:** FAIL **Priority:** MEDIUM
 
 ---
 
@@ -192,7 +192,7 @@ For all test cases unless specified otherwise:
 - Form is submitted successfully
 - First name allows special characters.
 
-**Status:** FAIL  **Priority:** HIGH
+**Status:** FAIL  **Priority:** MEDIUM
 
 ---
 
@@ -244,7 +244,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name allows numeric characters.
 
-**Status:** FAIL  **Priority:** HIGH
+**Status:** FAIL  **Priority:**  MEDIUM
 
 ---
 
@@ -271,9 +271,9 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name field allows special characters.
 
-**Status:** FAIL  **Priority:** HIGH
+**Status:** FAIL  **Priority:**  MEDIUM
 
-### TC-10 Email - Charcater limit in the local part
+### TC-10 Email - Character limit in the local part
 
 **Description:** Verify that the Email field has a character limit or handles very long input appropriately in the local part(before the @)
 
@@ -285,7 +285,7 @@ For all test cases unless specified otherwise:
 
 **Steps:**
 - Enter valid data in all required fields
-- Enter 65 characters in Email fiel (type "A" 76 times before the @)
+- Enter 65 characters in Email fiel (type "A" 65 times before the @)
 - Click Submit button
 
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
@@ -294,11 +294,11 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the local part
 
-**Status:** FAIL **Priority:** MEDIUM
+**Status:** FAIL **Priority:** LOW 
 
 ### TC-11 Email - Charcater limit in the domain part
 
-**Description:** Verify that the Email field has a character limit or handles very long input appropriately in the domain part (after the @ and beforer the last dot)
+**Description:** Verify that the Email field has a character limit or handles very long input appropriately in the domain part (after the @ and before the last dot)
 
 **Preconditions:** 
 - Navigate to https://demoqa.com/automation-practice-form
@@ -317,7 +317,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the domain part
 
-**Status:** FAIL  **Priority:** MEDIUM
+**Status:** FAIL  **Priority:** LOW 
 
 ### TC-12 Email - Charcater limit in the top level domain part
 
@@ -342,13 +342,13 @@ For all test cases unless specified otherwise:
 - Email field has a 5 character limit in the top level domain part
 - Form cannot be submited
 
-**Status:** PASS **Priority:** MEDIUM
+**Status:** PASS **Priority:** LOW 
 
 ---
 
 ### TC-13 Email - Top level domain part has a minumum lenght of 2 character
 
-**Description:** Verify that the Email field in the Top level domain part has a minumum lenght of 2 character (like .us or .mx)
+**Description:** Verify that the Email field in the Top level domain part has a minimum length of 2 character (like .us or .mx)
 
 **Preconditions:** 
 - Navigate to https://demoqa.com/automation-practice-form
@@ -368,10 +368,10 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Email field gets highlighted with a red outline
-- Email field has a 2 character minimun in the top level domain part
+- Email field has a 2 character minimum length in the top level domain part
 - Form cannot be submited
 
-**Status:** PASS **Priority:** MEDIUM
+**Status:** PASS **Priority:** LOW 
 
 ---
 
@@ -644,7 +644,7 @@ For all test cases unless specified otherwise:
 
 ### TC-23: Date of birth field rejects future dates
 
-**Description:**  Verify Mobile field only accepts numerical characters and ignores special characters
+**Description:**  Verify Date of Birth field rejects future dates
 
 **Preconditions:** 
 - User has navigated to https://demoqa.com/automation-practice-form
@@ -713,9 +713,13 @@ For all test cases unless specified otherwise:
 
 **Expected Result:** 
 - Subject field gets highlighted with a red outline
-- Form should not submit
+- Form should not submit if there is a non existing subject selected
 
-**Actual Result:** System deletes the subject whenever the user clicks outside the field and before they can submit the form
+**Actual Result:**
+- No dropdown options appear for "Astrology"
+- The text disappears when clicking outside
+- Field becomes blank
+- Form submitted successfully
 
 **Status:** PASS **Priority:** HIGH
 
@@ -748,7 +752,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-26: Picture field can only allow image formats
+### TC-27: Picture field can only allow image formats
 
 **Description:**  Verify that the picture field can only be used to upload images
 **Preconditions:** 
@@ -774,7 +778,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-27: Picture field allow different image formats
+### TC-28: Picture field allow different image formats
 
 **Description:**  Verify that the picture field can be used to upload images in diferent formats (jpg, png, gif, webm, etc)
 **Preconditions:** 
@@ -800,7 +804,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-28: Address - Character limit 
+### TC-29: Address - Character limit 
 
 **Description:** Verify that the address field has a character limit or handles very long input appropriately
 
@@ -808,7 +812,7 @@ For all test cases unless specified otherwise:
 - User has navigated to https://demoqa.com/automation-practice-form
 - All required fields filled with valid defaults
 
-**Test Data:** Adress: Type "C" 500 times
+**Test Data:** Address: Type "C" 500 times
 
 **Steps:**
 1. Enter valid data in all required fields
@@ -824,7 +828,7 @@ For all test cases unless specified otherwise:
 **Status:** FAIL **Priority:** LOW
 
 ---
-### TC-29: User can select a State without selecting a city
+### TC-30: User can select a State without selecting a city
 
 **Description:**  Since the City and State field are consider optional, the user should be able to select a state and ignore the city field
 
@@ -846,13 +850,13 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Summary window does not show the selected State
 
-**Status:** FAIL **Priority:** LOW
+**Status:** FAIL **Priority:** MEDIUM
 
 ---
 
-### TC-30: Summary window can be closed
+### TC-31: Summary window can be closed
 
-**Description:**  Once the summy window appear it should be able to be closed by clicking the "Close" button
+**Description:**  Once the summary window appear it should be able to be closed by clicking the "Close" button
 
 **Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
 
@@ -874,7 +878,7 @@ For all test cases unless specified otherwise:
 
 **Expected Result:**  
 - Form submitted successfully
-- Summary window can be close by clicking the "Close" Button
+- Summary window can be closed by clicking the "Close" Button
 
 **Actual Result:**
 - Form submitted successfully
