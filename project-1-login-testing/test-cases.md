@@ -125,7 +125,7 @@
 | **Actual Result** | Error message only says: "Username is required"|
 | **Status** | FAIL |
 |**Priority** | MEDIUM |
-| **Bug Reference | BUG-01 |
+| **Bug Reference** | BUG-01 |
 ---
 
 ### TC-10: Password field masks characters
