@@ -1,7 +1,6 @@
 # Test Cases - Student Form Functionality
 
 ## Default Test Data
-
 For all test cases unless specified otherwise:
 
 | Field | Value |
@@ -11,6 +10,8 @@ For all test cases unless specified otherwise:
 | Gender | "Male" |
 | Mobile | "1234567890" |
 | Date of Birth | "12 Oct 2000" |
+
+---
 
 ### TC-01: Valid submit by filling all fields
 
@@ -124,16 +125,14 @@ For all test cases unless specified otherwise:
 - User has navigated to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
-**Test Data:**
-- First Name: 256 characters: "A" repeated 256 times
+**Test Data:** First Name: 256 characters: "A" repeated 256 times
 
 **Steps:**
 1. Enter valid data in all other required fields
 2. Enter 256 characters in First Name field (type "A" 256 times)
 3. Click Submit button
 
-**Expected Result:** 
-The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
+**Expected Result:**  The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
 **Actual Result:**
 - Form submitted successfully
@@ -151,8 +150,7 @@ The system must handle long input in some way like reject with an error message,
 - Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
-**Test Data:**
-- First Name: "Carlos123"
+**Test Data:** First Name: "Carlos123"
 
 **Steps:**
 1. Enter valid data in all other required fields
@@ -164,10 +162,10 @@ The system must handle long input in some way like reject with an error message,
 - First name field is highlighted with a red outline
 
 **Actual Result:** 
-- Form is submited
+- Form is submitted successfully
 - First name allows numeric characters.
 
-**Status:** FAIL
+**Status:** PASS
 
 ---
 
@@ -179,8 +177,7 @@ The system must handle long input in some way like reject with an error message,
 - Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
-**Test Data:**
-- First Name: "Carlos@#$"
+**Test Data:** First Name: "Carlos@#$"
 
 **Steps:**
 1. Enter valid data in all other required fields
@@ -192,7 +189,7 @@ The system must handle long input in some way like reject with an error message,
 - First name field is highlighted with a red outline
 
 **Actual Result:** 
-- Form is submited
+- Form is submitted successfully
 - First name allows special characters.
 
 **Status:** PASS
@@ -214,18 +211,17 @@ The system must handle long input in some way like reject with an error message,
 2. Enter 256 characters in Last Name field (type "B" 256 times)
 3. Click Submit button
 
-**Expected Result:** 
-The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
+**Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
 **Actual Result:**
 - Form submitted successfully
 - Last name field accepted very long text without any error
 
-**Status:** FAIL
+**Status:** PASS
 
 ---
 
-### TC-08: Last Name  - Rejects numeric characters
+### TC-08: Last Name - Rejects numeric characters
 
 **Description:** Verify that Last Name field rejects input containing numbers
 
@@ -245,7 +241,7 @@ The system must handle long input in some way like reject with an error message,
 - Last name field is highlighted with a red outline
 
 **Actual Result:** 
-- Form is submited
+- Form submitted successfully
 - Last name allows numeric characters.
 
 **Status:** FAIL
@@ -272,7 +268,7 @@ The system must handle long input in some way like reject with an error message,
 - Last name field is highlighted with a red outline
 
 **Actual Result:** 
-- Form is submited
+- Form submitted successfully
 - Last name field allows special characters.
 
 **Status:** FAIL
@@ -295,7 +291,7 @@ The system must handle long input in some way like reject with an error message,
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
 **Actual Result:** 
-- Form is submited
+- Form submitted successfully
 - Email field has no character limit in the local part
 
 ### TC-11 Email - Charcater limit in the domain part
@@ -316,7 +312,7 @@ The system must handle long input in some way like reject with an error message,
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
 **Actual Result:** 
-- Form is submited
+- Form submitted successfully
 - Email field has no character limit in the domain part
 
 **Status:** PASS
@@ -342,6 +338,7 @@ The system must handle long input in some way like reject with an error message,
 **Actual Result:** 
 - Email field gets highlighted with a red outline
 - Email field has a 5 character limit in the top level domain part
+- Form cannot be submited
 
 **Status:** PASS
 
@@ -514,14 +511,13 @@ The system must handle long input in some way like reject with an error message,
 
 **Description:** Verify that the gender field can be selected with one gender at a time.
 
-**Preconditions:** Navigate to https://demoqa.com/automation-practice-form
+**Preconditions:** 
+- Navigate to https://demoqa.com/automation-practice-form
+- All other required fields filled with valid defaults
 
 **Test Data:**
-- First Name: "Carlos"
-- Last Name: "Solorzano@#$"
 - Gender: "Male"
-- Mobile: "1234567890"
-- Date of Birth: "12 Oct 2000"
+- Second gender: "Female"
 
 **Steps:**
 1. Enter valid data in all required fields
@@ -529,9 +525,15 @@ The system must handle long input in some way like reject with an error message,
 3. Try to select a second Gender "Female"
 4. Click Submit button
 
-**Expected Result:** System should only allow user to highligh one gender of the gender list
+**Expected Result:** 
+- System should only allow user to highligh one gender of the gender list
+- Form should not be submited
 
 **Actual Result:** System only highlights the last gender that the user clicked
+
+**Status:** PASS
+
+---
 
 ### TC-19: Mobile - Lenght (More than 10 digits)
 
@@ -550,7 +552,9 @@ The system must handle long input in some way like reject with an error message,
 
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
 
-**Actual Result:** Shows mobile field highlighted with a red outline and form cannot be submitted
+**Actual Result:** 
+- Shows mobile field highlighted with a red outline and
+- Form cannot be submitted
 
 **Status:** PASS
 
@@ -636,7 +640,6 @@ The system must handle long input in some way like reject with an error message,
 
 ---
 
-
 ### TC-23: Date of birth field rejects future dates
 
 **Description:**  Verify Mobile field only accepts numerical characters and ignores special characters
@@ -657,7 +660,7 @@ The system must handle long input in some way like reject with an error message,
 - Form should not submit
 
 **Actual Result:** 
-- Form can be submitted
+- Form submitted successfully
 - Date of birth field allows future dates
 
 **Status:** PASS
@@ -679,13 +682,13 @@ The system must handle long input in some way like reject with an error message,
 2. Select the subjects English, Maths, Civics and Arts
 3. Click Submit button
 
-**Expected Result:** 
-- User is allowed to select multiple subject
+**Expected Result:** +
 - Form should be submited
+- User is allowed to select multiple subject
 
 **Actual Result:** 
-- User is allowed to select multiple subject
-- Form should be submited
+- Form submitted successfully
+- User is allowed to select multiple subjects
 
 **Status:** PASS
 
@@ -712,7 +715,6 @@ The system must handle long input in some way like reject with an error message,
 
 **Actual Result:** System deletes the subject whenever the user clicks outside the field and before they can submit the form
 
-
 **Status:** PASS
 
 ---
@@ -738,7 +740,7 @@ The system must handle long input in some way like reject with an error message,
 
 **Actual Result:** 
 - User is allowed to select multiple hobbies
-- Form gets submited
+- Form submitted successfully
 
 **Status:** PASS
 
@@ -764,7 +766,7 @@ The system must handle long input in some way like reject with an error message,
 
 **Actual Result:** 
 - User is allowed to upload non image files in the picture field
-- Form gets submited
+- Form submitted successfully
 
 **Status:** PASS
 
@@ -790,7 +792,7 @@ The system must handle long input in some way like reject with an error message,
 
 **Actual Result:** 
 - User is allowed to upload images with diferent formats
-- Form gets submited
+- Form submitted successfully
 
 **Status:** PASS
 
@@ -846,6 +848,43 @@ The system must handle long input in some way like reject with an error message,
 
 ---
 
+### TC-30: Summary window can be closed
+
+**Description:**  Once the summy window appear it should be able to be closed by clicking the "Close" button
+
+**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+
+**Test Data:**
+- First Name: "Carlos"
+- Last Name: "Solorzano"
+- Gender: "Male"
+- Mobile: "1234567890"
+- Date of Birth: "12 Oct 2000"
+
+**Steps:**
+1. Enter First Name: "Carlos"
+2. Enter Last Name: "Solorzano"
+3. Select Gender: "Male"
+4. Enter Mobile: "1234567890"
+5. Enter Date of Birth: "12 Oct 2000"
+6. Click Submit button
+7. Click Close button
+
+**Expected Result:**  
+- Form submitted successfully
+- Summary window can be close by clicking the "Close" Button
+
+**Actual Result:**
+- Form submitted successfully
+- Summary window cannot get closed by cliking the "Close" Button
+- Summary window can only get closed by clicking anywhere outside the window.
+
+**Status:** PASS
+
+---
+**Status:** PASS
+
+---
 
 
 
