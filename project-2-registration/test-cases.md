@@ -71,12 +71,12 @@ For all test cases unless specified otherwise:
 2. Click Submit button
 
 **Expected Result:** 
-- Form not submited
+- Form not submitted
 - Required fields are highlighted with a red outline
 
 **Actual Result:** 
-- Form not submited
-- Required fields are highlighted with a red outline (first name, last name, gender, mobile and date of birt)
+- Form not submitted
+- Required fields are highlighted with a red outline (first name, last name, gender, mobile and date of birth)
 - Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
 
 **Status:** PASS | **Priority:** HIGH
@@ -204,11 +204,11 @@ For all test cases unless specified otherwise:
 - Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
-**Test Data:** Last Name: 256 characters: "B" repeated 256 times
+**Test Data:** Last Name: 51 characters: "B" repeated 51 times
 
 **Steps:**
 1. Enter valid data in all other required fields
-2. Enter 256 characters in Last Name field (type "B" 256 times)
+2. Enter 51 characters in Last Name field (type "B" 51 times)
 3. Click Submit button
 
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
@@ -287,7 +287,7 @@ For all test cases unless specified otherwise:
 
 **Steps:**
 - Enter valid data in all required fields
-- Enter 65 characters in Email fiel (type "A" 65 times before the @) then "example.com"
+- Enter 65 characters in Email field (type "A" 65 times before the @) then "example.com"
 - Click Submit button
 
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
@@ -300,7 +300,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-11 Email - Characater limit in the domain part
+### TC-11 Email - Character limit in the domain part
 
 **Description:** Verify that the Email field has a character limit or handles very long input appropriately in the domain part (after the @ and before the last dot)
 
@@ -323,7 +323,7 @@ For all test cases unless specified otherwise:
 
 **Status:** FAIL  | **Priority:** LOW  |  **Bug Reference** BUG-08
 
-### TC-12 Email - Characater limit in the top level domain part
+### TC-12 Email - Character limit in the top level domain part
 
 **Description:** Verify that the Email field has a character limit or handles very long input appropriately in the top level domain part (after the last dot)
 
@@ -344,13 +344,13 @@ For all test cases unless specified otherwise:
 **Actual Result:** 
 - Email field gets highlighted with a red outline
 - Email field has a 5 character limit in the top level domain part
-- Form cannot be submited
+- Form cannot be submitted
 
 **Status:** PASS | **Priority:** LOW 
 
 ---
 
-### TC-13 Email - Top level domain part has a minumum lenght of 2 character
+### TC-13 Email - Top level domain part has a minumum length of 2 character
 
 **Description:** Verify that the Email field in the Top level domain part has a minimum length of 2 character (like .us or .mx)
 
@@ -373,7 +373,7 @@ For all test cases unless specified otherwise:
 **Actual Result:** 
 - Email field gets highlighted with a red outline
 - Email field has a 2 character minimum length in the top level domain part
-- Form cannot be submited
+- Form cannot be submitted
 
 **Status:** PASS | **Priority:** LOW 
 
@@ -400,7 +400,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Email field gets highlighted with a red outline
-- Form cannot be submited
+- Form cannot be submitted
 
 **Status:** PASS | **Priority:** HIGH
 
@@ -427,7 +427,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Email field gets highlighted with a red outline
-- Form cannot be submited
+- Form cannot be submitted
 
 **Status:** PASS | **Priority:** HIGH
 
@@ -435,7 +435,7 @@ For all test cases unless specified otherwise:
 
 ### TC-16  Email without the top level domain part
 
-**Description:** Verify that the Email requires to have a valid domain part (after thethe dot)
+**Description:** Verify that the Email requires to have a valid domain part (after the dot)
 
 **Preconditions:** 
 - Navigate to https://demoqa.com/automation-practice-form
@@ -454,7 +454,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Email field gets highlighted with a red outline
-- Form cannot be submited
+- Form cannot be submitted
 
 **Status:** PASS | **Priority:** HIGH
 
@@ -481,7 +481,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Email field gets highlighted with a red outline
-- Form cannot be submited
+- Form cannot be submitted
 
 **Status:** PASS | **Priority:** HIGH
 
@@ -508,7 +508,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Email field gets highlighted with a red outline
-- Form cannot be submited
+- Form cannot be submitted
 
 **Status:** PASS | **Priority:** MEDIUM
 
@@ -533,16 +533,18 @@ For all test cases unless specified otherwise:
 4. Click Submit button
 
 **Expected Result:** 
-- System should only allow user to highligh one gender of the gender list
-- Form should not be submited
+- System should only allow user to highlight one gender of the gender list
+- Form should be submitted
 
-**Actual Result:** System only highlights the last gender that the user clicked
+**Actual Result:** 
+- System only highlights the last gender that the user clicked
+- Form submitted successfully
 
 **Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-20: Mobile - Lenght (More than 10 digits)
+### TC-20: Mobile - Length (More than 10 digits)
 
 **Description:**  Verify Mobile field only accepts exactly 10 digits and ignores extra digits
 
@@ -566,7 +568,7 @@ For all test cases unless specified otherwise:
 **Status:** PASS | **Priority:** HIGH
 
 ---
-### TC-21: Mobile - Lenght (Less than 10 digits)
+### TC-21: Mobile - Length (Less than 10 digits)
 
 **Description:**  Verify Mobile field only accepts exactly 10 digits 
 
@@ -582,7 +584,7 @@ For all test cases unless specified otherwise:
 3. Click Submit button
 
 **Expected Result:** 
-- Email field gets highlighted with a red outline
+- Mobile field gets highlighted with a red outline
 - Form should not submit
 
 **Actual Result:** 
@@ -609,7 +611,7 @@ For all test cases unless specified otherwise:
 3. Click Submit button
 
 **Expected Result:** 
-- Email field gets highlighted with a red outline
+- Mobile field gets highlighted with a red outline
 - Form should not submit
 
 **Actual Result:** 
@@ -655,11 +657,11 @@ For all test cases unless specified otherwise:
 - User has navigated to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
-**Test Data:** Date of birt: 05/24/2026
+**Test Data:** Date of birth: 05/24/2026
 
 **Steps:**
 1. Enter valid data in all other required fields
-2. Select "05/24/2026" in Date of birt field
+2. Select "05/24/2026" in Date of birth field
 3. Click Submit button
 
 **Expected Result:** 
@@ -676,7 +678,7 @@ For all test cases unless specified otherwise:
 
 ### TC-25: User can select multiple subjects
 
-**Description:**  Verify that the user is allowed to select multiple subject
+**Description:**  Verify that the user is allowed to select multiple subjects
 
 **Preconditions:** 
 - User has navigated to https://demoqa.com/automation-practice-form
@@ -690,7 +692,7 @@ For all test cases unless specified otherwise:
 3. Click Submit button
 
 **Expected Result:** +
-- Form should be submited
+- Form should be submitted
 - User is allowed to select multiple subject
 
 **Actual Result:** 
@@ -741,13 +743,13 @@ For all test cases unless specified otherwise:
 **Test Data:** Hobbies: Sports, Reading, Music
 
 **Steps:**
-1. Enter valid data in allrequired fields
+1. Enter valid data in all required fields
 2. Click the box for all the hobbies available on the form (Sports, Reading, Music)
 3. Click Submit button
 
 **Expected Result:** 
 - User is allowed to select multiple hobbies
-- Form should be submited
+- Form should be submitted
 
 **Actual Result:** 
 - User is allowed to select multiple hobbies
@@ -773,7 +775,7 @@ For all test cases unless specified otherwise:
 
 **Expected Result:** 
 - Picture field is highlighted with a red outline or shows a warning message
-- Form should not be submited
+- Form should not be submitted
 
 **Actual Result:** 
 - User is allowed to upload non image files in the picture field
@@ -785,7 +787,7 @@ For all test cases unless specified otherwise:
 
 ### TC-29: Picture field allows different image formats
 
-**Description:**  Verify that the picture field can be used to upload images in diferent formats (jpg, png, gif, webm, etc)
+**Description:**  Verify that the picture field can be used to upload images in different formats (jpg, png, gif, webm, etc)
 **Preconditions:** 
 - User has navigated to https://demoqa.com/automation-practice-form
 - All required fields filled with valid defaults
@@ -798,8 +800,8 @@ For all test cases unless specified otherwise:
 3. Click Submit button
 
 **Expected Result:** 
-- User is allowed to upload images with diferent formats
-- Form should be submited
+- User is allowed to upload images with different formats
+- Form should be submitted
 
 **Actual Result:** 
 - User is allowed to upload images with diferent formats
@@ -821,7 +823,7 @@ For all test cases unless specified otherwise:
 
 **Steps:**
 1. Enter valid data in all required fields
-2. Enter 500 characters in address field (type "C" 201 times)
+2. Enter 201 characters in address field (type "C" 201 times)
 3. Click Submit button
 
 **Expected Result:**  The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
@@ -889,7 +891,7 @@ For all test cases unless specified otherwise:
 
 **Actual Result:**
 - Form submitted successfully
-- Summary window cannot get closed by cliking the "Close" Button
+- Summary window cannot get closed by clicking the "Close" Button
 - Summary window can only get closed by clicking anywhere outside the window.
 
 **Status:** FAIL | **Priority:** HIGH | **Bug reference:** BUG-13
