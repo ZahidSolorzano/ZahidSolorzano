@@ -52,12 +52,12 @@ For all bug reports unless specified otherwise:
 | Field | Value |
 |-------|-------|
 | **Test Case** | TC-06: First Name - Reject special characters |
-| **Description** | First Name field allows user to enter special characters without any error message |
+| **Description** | First Name field allows user to enter special characters without any error message (besides spaces, hyphens, dots and apostrophes) |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
 | **Test Data** | First Name: "Carlos@#$" |
 | **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "Carlos@#$" in First Name field <br> 3. Click Submit button |
 | **Expected Result** | Form should not submit <br> First Name field should be highlighted with a red outline |
-| **Actual Result** | Form submitted successfully <br> First Name field accepts special characters without error |
+| **Actual Result** | Form submitted successfully <br> First Name field accepts all special characters without error |
 | **Environment** | Windows 10, Google Chrome |
 | **Severity** | Low |
 | **Priority** | Medium |
@@ -82,3 +82,21 @@ For all bug reports unless specified otherwise:
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![last-name-no-limits](./evidence/last-name-no-limits.png) |
+
+### BUG-05: Last Name field allows numeric characters
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-08: Last Name - Rejects numeric characters |
+| **Description** | Last Name field allows user to enter numeric characters without any error message |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
+| **Test Data** | Last Name: "Solorzano123" |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter Last Name: "Solorzano123" in Last Name field <br> 3. Click Submit button |
+| **Expected Result** | Form should not submit <br> Last Name field should be highlighted with a red outline |
+| **Actual Result** | Form submitted successfully <br> Last Name field accepts numeric characters without error |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Low |
+| **Priority** | Medium |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![last-name-numbers](./evidence/last-name-numbers.png) |
