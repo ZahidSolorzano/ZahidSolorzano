@@ -119,7 +119,7 @@ For all bug reports unless specified otherwise:
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![last-name-specials](./evidence/last-name-specials.png) |
 
-### BUG-07: Email has no character limit in the local par
+### BUG-07: Email has no character limit in the local part
 
 | Field | Value |
 |-------|-------|
@@ -132,8 +132,28 @@ For all bug reports unless specified otherwise:
 | **Actual Result** | Form submitted successfully <br> Email field accepted very long text without any error or truncation in the local part |
 | **Environment** | Windows 10, Google Chrome |
 | **Severity** | Low |
-| **Priority** | Low |
+| **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![local-part-limit](./evidence/local-part-limit.png) |
+
+### BUG-08: Email has no character limit in the domain part
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-11 Email - Charcater limit in the domain part |
+| **Description** | Email field  in the domain part (after the @ and before the last dot) has no character limit, accepts very long text (65+ characters) without any error message or truncation |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
+| **Test Data** | Email:  + "carlostest@" + (65 times "A") + ".com" |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "carlostest@" + (type 65 times "A") + ".com" in the email field <br> 3. Click Submit button |
+| **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
+| **Actual Result** | Form submitted successfully <br> Email field accepted very long text without any error or truncation in the domain part |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Low |
+| **Priority** | Medium |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![domain-part-limit](./evidence/domain-part-limit.png) |
+
+
 
