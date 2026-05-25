@@ -147,7 +147,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify First Name field rejects input containing numbers
 
 **Preconditions:** 
-- Navigate to https://demoqa.com/automation-practice-form
+- User has navigated to the practice form 
 - All other required fields filled with valid defaults
 
 **Test Data:** First Name: "Carlos123"
@@ -163,9 +163,9 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** 
 - Form is submitted successfully
-- First name allows numeric characters.
+- First name field allows numeric characters.
 
-**Status:** FAIL **Priority:** MEDIUM
+**Status:** FAIL | **Priority:** MEDIUM | **Bug Reference** BUG-02
 
 ---
 
