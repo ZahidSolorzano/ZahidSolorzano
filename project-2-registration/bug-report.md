@@ -159,7 +159,7 @@ For all bug reports unless specified otherwise:
 
 | Field | Value |
 |-------|-------|
-| **Test Case** | TC-23: Date of birth field rejects future dates |
+| **Test Case** | TC-24: Date of birth field rejects future dates |
 | **Description** | Date of birth field allows future dates without any errors or warnings|
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
 | **Test Data** | Date of birth: 05/24/2026 |
@@ -177,7 +177,7 @@ For all bug reports unless specified otherwise:
 
 | Field | Value |
 |-------|-------|
-| **Test Case** | ### TC-27: Picture field can only allow image formats |
+| **Test Case** | ### TC-28: Picture field can only allow image formats |
 | **Description** | Picture field can be used to upload files that are not images (like videos) |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
 | **Test Data** |  Picture: example.mp4 |
@@ -195,7 +195,7 @@ For all bug reports unless specified otherwise:
 
 | Field | Value |
 |-------|-------|
-| **Test Case** | TC-29: Address - Character limit  |
+| **Test Case** | TC-30: Address - Character limit  |
 | **Description** | Address field has no character limit, accepts very long text (201+ characters) without any error message or truncation |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
 | **Test Data** | Address: Type "C" 500 times |
@@ -213,7 +213,7 @@ For all bug reports unless specified otherwise:
 
 | Field | Value |
 |-------|-------|
-| **Test Case** | TC-30: User can select a State without selecting a city |
+| **Test Case** | TC-31: User can select a State without selecting a city |
 | **Description** | Since the City and State field are consider optional, the user should be able to select a state and ignore the city field, however when user does this , the selected state does not shows in the summary window|
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
 | **Test Data** | State: "NCR" |
@@ -232,7 +232,7 @@ For all bug reports unless specified otherwise:
 
 | Field | Value |
 |-------|-------|
-| **Test Case** | ### TC-31: Summary window can be closed |
+| **Test Case** | ### TC-32: Summary window can be closed |
 | **Description** | Once the summary window appear it should be able to be closed by clicking the "Close" button, instead the "Close" button does nothing and Summary window can only get closed by clicking anywhere outside the window.|
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form  |
 | **Test Data** | First Name: "Carlos" <br> Last Name: "Solorzano" <br> Gender: "Male" <br> Mobile: "1234567890" <br> Date of Birth: "12 Oct 2000" |
