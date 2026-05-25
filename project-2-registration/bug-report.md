@@ -19,7 +19,7 @@ For all bug reports unless specified otherwise:
 | **Description** | First Name field has no character limit, accepts very long text (256+ characters) without any error message or truncation |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
 | **Test Data** | First Name: 256 characters ("A" repeated 256 times) |
-| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 256 characters in First Name field <br> 3. Click Submit button |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 256 characters in First Name field (type "A" 256 times) <br> 3. Click Submit button |
 | **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
 | **Actual Result** | Form submitted successfully <br> First Name field accepted very long text without any error or truncation. |
 | **Environment** | Windows 10, Google Chrome |
@@ -64,3 +64,21 @@ For all bug reports unless specified otherwise:
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![first-name-specials](./evidence/first-name-specials.png) |
+
+### BUG-04: Last Name field has no character limit
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-07: Last Name - Character limit |
+| **Description** | Last Name field has no character limit, accepts very long text (256+ characters) without any error message or truncation |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
+| **Test Data** | Last Name: 256 characters: "B" repeated 256 times |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 256 characters in Last Name field (type "B" 256 times) <br> 3. Click Submit button |
+| **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
+| **Actual Result** | Form submitted successfully <br> Last Name field accepted very long text without any error or truncation. |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Low |
+| **Priority** | Low |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![last-name-no-limits](./evidence/last-name-no-limits.png) |
