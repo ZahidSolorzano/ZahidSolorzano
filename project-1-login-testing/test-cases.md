@@ -142,3 +142,29 @@
 |**Priority** | MEDIUM |
 ---
 
+### TC-11: Login with error_user
+
+| Field | Value |
+|-------|-------|
+| **Description** | Verify that error_user can log in but experiences failures in cart/checkout actions |
+| **Preconditions** | User is on https://www.saucedemo.com |
+| **Test Data** | Username: "error_user", Password: "secret_sauce" |
+| **Steps** | 1. Enter username: "error_user" <br> 2. Enter password: "secret_sauce" <br> 3. Click "Login" button|
+| **Expected Result** | Login should be successful <br> Cart or checkout actions should FAIL |
+| **Actual Result** | Login successful <br> User logins to the inventory page with 6 items already added to the cart that cannot be removed |
+| **Status** | PASS |
+|**Priority** | HIGH |
+---
+
+### TC-12: Login with visual_user
+
+| Field | Value |
+|-------|-------|
+| **Description** | Verify that visual_user can log in but has UI rendering issues |
+| **Preconditions** | User is on https://www.saucedemo.com |
+| **Test Data** | Username: "visual_user", Password: "secret_sauce" |
+| **Steps** | 1. Enter username: "visual_user" <br> 2. Enter password: "secret_sauce" <br> 3. Click "Login" button <br> 4. Observe product images and layout <br> 5. Compare with standard_user view |
+| **Expected Result** | Login should be successful <br> UI elements (images, buttons, alignment) may appear incorrect |
+| **Actual Result** | [Fill after testing] |
+| **Status** | ⏳ PENDING |
+
