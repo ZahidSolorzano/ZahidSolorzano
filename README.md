@@ -3,7 +3,7 @@
 Aspirant for Junior Tester position
 
 ## Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/ZahidSolorzano)
+[![My CV](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/ZahidSolorzano)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carlos-solorzano-escobar-bb1b3939a/)
 Email: thursdaychild1984@gmail.com
 
@@ -39,13 +39,25 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 **Application:** SauceDemo (demo e-commerce)  
 **Goal:** Validate login functionality with positive and negative scenarios
 
-- ✅ Created 10 test cases
-- 🐞 Found and reported 3 bugs
+- ✅ Created 11 test cases
+- 🐞 Found and reported 1 bug
 - 📸 Documented with screenshots
 
 🎫 [View test plan](./project-1-login-testing/test-plan.md)
-📄 [View test cases](./project-1-login/test-cases.md)  
-🐞 [View bug reports](./project-1-login/bugs.md)
+📄 [View test cases](./project-1-login-testing/test-cases.md)  
+🐞 [View bug reports](./project-1-login-testing/bug-report.md)
+
+### Project 2: Practice Form Testing
+**Application:** demoqa.com (practice form)  
+**Goal:** Validate the practice form functionality with positive and negative scenarios
+
+- ✅ Created 32 test cases
+- 🐞 Found and reported 13 bugs
+- 📸 Documented with screenshots
+
+🎫 [View test plan](./project-2-registration/test-plan.md)
+📄 [View test cases](./project-2-registration/test-cases.md)  
+🐞 [View bug reports](./project-2-registration/bug-report.md)
 
 ## Technical Background
 | Area | Technologies |
