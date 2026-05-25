@@ -17,7 +17,7 @@ For all test cases unless specified otherwise:
 
 **Description:** User can successfully submit the registration form by filling all available fields with valid data.
 
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+**Preconditions:** User has navigated to the practice form (https://demoqa.com/automation-practice-form)
 
 **Test Data:**
 - First Name: "Carlos"
@@ -56,7 +56,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Summary window displayed with all data correctly shown
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
@@ -64,7 +64,7 @@ For all test cases unless specified otherwise:
 
 **Description:** User cannot successfully submit the registration form by leaving in blank all the fields.
 
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+**Preconditions:** User has navigated to the practice formm
 
 **Steps:**
 1. Do not enter any data in any field
@@ -79,7 +79,7 @@ For all test cases unless specified otherwise:
 - Required fields are highlighted with a red outline (first name, last name, gender, mobile and date of birt)
 - Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
@@ -87,7 +87,7 @@ For all test cases unless specified otherwise:
 
 **Description:** User can successfully submit the registration form by filling only the required fields with valid data.
 
-**Preconditions:** User has navigated to https://demoqa.com/automation-practice-form
+**Preconditions:** User has navigated to the practice form
 
 **Test Data:**
 - First Name: "Carlos"
@@ -113,7 +113,7 @@ For all test cases unless specified otherwise:
 - Summary window displayed with all data correctly shown
 - Optional fields are highlighted with a green outline (email, subjects, hobbies, picture, address, city and state)
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
@@ -122,7 +122,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that the First Name field has a character limit or handles very long input appropriately
 
 **Preconditions:** 
-- User has navigated to https://demoqa.com/automation-practice-form
+- User has navigated to the practice form
 - All other required fields filled with valid defaults
 
 **Test Data:** First Name: 256 characters: "A" repeated 256 times
@@ -138,7 +138,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - First name field accepted very long text without any error
 
-**Status:** FAIL **Priority:** LOW **Bug reference:** BUG-01
+**Status:** FAIL | **Priority:** LOW | **Bug reference:** BUG-01
 
 ---
 
