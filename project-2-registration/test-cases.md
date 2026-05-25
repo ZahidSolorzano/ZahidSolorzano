@@ -64,8 +64,7 @@ For all test cases unless specified otherwise:
 
 **Description:** User cannot successfully submit the registration form by leaving in blank all the fields.
 
-**Preconditions:** User has navigated to the practice formm
-
+**Preconditions:** - Navigate to https://demoqa.com/automation-practice-form
 **Steps:**
 1. Do not enter any data in any field
 2. Click Submit button
@@ -87,7 +86,7 @@ For all test cases unless specified otherwise:
 
 **Description:** User can successfully submit the registration form by filling only the required fields with valid data.
 
-**Preconditions:** User has navigated to the practice form
+**Preconditions:** - Navigate to https://demoqa.com/automation-practice-form
 
 **Test Data:**
 - First Name: "Carlos"
@@ -122,7 +121,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that the First Name field has a character limit or handles very long input appropriately
 
 **Preconditions:** 
-- User has navigated to the practice form
+- Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
 **Test Data:** First Name: 256 characters: "A" repeated 256 times
@@ -147,7 +146,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify First Name field rejects input containing numbers
 
 **Preconditions:** 
-- User has navigated to the practice form 
+- Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
 **Test Data:** First Name: "Carlos123"
@@ -174,7 +173,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that First Name field rejects input containing special characters (besides spaces, hyphens, dots and apostrophes)
 
 **Preconditions:** 
-- User has navigated to the practice form 
+- Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
 **Test Data:** First Name: "Carlos@#$"
@@ -201,7 +200,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that the Last Name field has a character limit or handles very long input appropriately
 
 **Preconditions:** 
-- User has navigated to the practice formm
+- Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
 **Test Data:** Last Name: 256 characters: "B" repeated 256 times
@@ -226,7 +225,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that Last Name field rejects input containing numbers
 
 **Preconditions:** 
-- User has navigated to the practice formm
+- Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
 **Test Data:** Last Name: "Solorzano123"
@@ -253,7 +252,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify Last Name field rejects input containing special characters (besides spaces, hyphens, dots and apostrophes)
 
 **Preconditions:** 
-- User has navigated to the practice formm
+- Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
 **Test Data:** Last Name: "Solorzano@#$"
@@ -280,7 +279,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that the Email field has a character limit or handles very long input appropriately in the local part (before the @)
 
 **Preconditions:** 
-- User has navigated to the practice formm
+- Navigate to https://demoqa.com/automation-practice-form
 - All required fields filled with valid defaults
 
 **Test Data:** Email: (65 times "A") + "@example.com"
@@ -346,7 +345,7 @@ For all test cases unless specified otherwise:
 - Email field has a 5 character limit in the top level domain part
 - Form cannot be submited
 
-**Status:** PASS **Priority:** LOW 
+**Status:** PASS | **Priority:** LOW 
 
 ---
 
@@ -375,11 +374,11 @@ For all test cases unless specified otherwise:
 - Email field has a 2 character minimum length in the top level domain part
 - Form cannot be submited
 
-**Status:** PASS **Priority:** LOW 
+**Status:** PASS | **Priority:** LOW 
 
 ---
 
-### TC-13 Email without the local part
+### TC-14 Email without the local part
 
 **Description:** Verify that the Email requires to have a valid local part (before the @)
 
@@ -402,10 +401,11 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
-### TC-14 Email without the domain part
+
+### TC-15 Email without the domain part
 
 **Description:** Verify that the Email requires to have a valid domain part (after the @ before the dot)
 
@@ -428,11 +428,11 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-15  Email without the top level domain part
+### TC-16  Email without the top level domain part
 
 **Description:** Verify that the Email requires to have a valid domain part (after thethe dot)
 
@@ -455,11 +455,11 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-16  Email rejects special characters
+### TC-17  Email rejects special characters
 
 **Description:** Verify that the Email field rejects input containing special characters (besides "@" and ".")
 
@@ -482,11 +482,11 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-17  Email rejects numerical characters in the top level domain part
+### TC-18  Email rejects numerical characters in the top level domain part
 
 **Description:** Verify that the Email field rejects input containing numerical characters in the top level domain part (after the dot)
 
@@ -509,11 +509,11 @@ For all test cases unless specified otherwise:
 - Email field gets highlighted with a red outline
 - Form cannot be submited
 
-**Status:** PASS **Priority:** MEDIUM
+**Status:** PASS | **Priority:** MEDIUM
 
 ---
 
-### TC-18: User can only select one gender
+### TC-19: User can only select one gender
 
 **Description:** Verify that the gender field can be selected with one gender at a time.
 
@@ -537,11 +537,11 @@ For all test cases unless specified otherwise:
 
 **Actual Result:** System only highlights the last gender that the user clicked
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-19: Mobile - Lenght (More than 10 digits)
+### TC-20: Mobile - Lenght (More than 10 digits)
 
 **Description:**  Verify Mobile field only accepts exactly 10 digits and ignores extra digits
 
@@ -562,10 +562,10 @@ For all test cases unless specified otherwise:
 - Shows mobile field highlighted with a red outline and
 - Form cannot be submitted
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
-### TC-20: Mobile - Lenght (Less than 10 digits)
+### TC-21: Mobile - Lenght (Less than 10 digits)
 
 **Description:**  Verify Mobile field only accepts exactly 10 digits 
 
@@ -588,11 +588,11 @@ For all test cases unless specified otherwise:
 - Shows mobile field highlighted with a red outline 
 - Form cannot be submitted
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-21: Mobile field rejects non numerical character
+### TC-22: Mobile field rejects non numerical character
 
 **Description:**  Verify Mobile field only accepts numerical characters and ignores non numerical character
 
@@ -615,11 +615,11 @@ For all test cases unless specified otherwise:
 - Shows mobile field highlighted with a red outline 
 - Form cannot be submitted
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-22: Mobile field rejects special characters
+### TC-23: Mobile field rejects special characters
 
 **Description:**  Verify Mobile field only accepts numerical characters and ignores special characters
 
@@ -642,11 +642,11 @@ For all test cases unless specified otherwise:
 - Mobile field gets highlighted with a red outline
 - Form cannot be submitted
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-23: Date of birth field rejects future dates
+### TC-24: Date of birth field rejects future dates
 
 **Description:**  Verify Date of Birth field rejects future dates
 
@@ -669,11 +669,11 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Date of birth field allows future dates
 
-**Status:** FAIL **Priority:** HIGH
+**Status:** FAIL |  **Priority:** HIGH | **Bug reference:** BUG-09
 
 ---
 
-### TC-24: User can select multiple subjects
+### TC-25: User can select multiple subjects
 
 **Description:**  Verify that the user is allowed to select multiple subject
 
@@ -700,7 +700,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-25: User cannot select a non existing subject
+### TC-26: User cannot select a non existing subject
 
 **Description:**  Verify that the user is not allowed to select a subject that is not on the database
 
@@ -729,7 +729,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-26: User can select multiple hobbies
+### TC-27: User can select multiple hobbies
 
 **Description:**  Verify that the user is allowed to select multiple hobbies
 
@@ -756,7 +756,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-27: Picture field can only allow image formats
+### TC-28: Picture field can only allow image formats
 
 **Description:**  Verify that the picture field can only be used to upload images
 **Preconditions:** 
@@ -778,11 +778,11 @@ For all test cases unless specified otherwise:
 - User is allowed to upload non image files in the picture field
 - Form submitted successfully
 
-**Status:** FAIL **Priority:** HIGH
+**Status:** FAIL | **Priority:** HIGH | **Bug reference:** BUG-10
 
 ---
 
-### TC-28: Picture field allow different image formats
+### TC-29: Picture field allows different image formats
 
 **Description:**  Verify that the picture field can be used to upload images in diferent formats (jpg, png, gif, webm, etc)
 **Preconditions:** 
@@ -804,11 +804,11 @@ For all test cases unless specified otherwise:
 - User is allowed to upload images with diferent formats
 - Form submitted successfully
 
-**Status:** PASS **Priority:** HIGH
+**Status:** PASS | **Priority:** HIGH
 
 ---
 
-### TC-29: Address - Character limit 
+### TC-30: Address - Character limit 
 
 **Description:** Verify that the address field has a character limit or handles very long input appropriately
 
@@ -816,11 +816,11 @@ For all test cases unless specified otherwise:
 - User has navigated to https://demoqa.com/automation-practice-form
 - All required fields filled with valid defaults
 
-**Test Data:** Address: Type "C" 500 times
+**Test Data:** Address: Type "C" 201 times
 
 **Steps:**
 1. Enter valid data in all required fields
-2. Enter 500 characters in address field (type "C" 500 times)
+2. Enter 500 characters in address field (type "C" 201 times)
 3. Click Submit button
 
 **Expected Result:**  The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
@@ -829,10 +829,11 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Address field accepted very long text without any error
 
-**Status:** FAIL **Priority:** LOW
+**Status:** FAIL | **Priority:** LOW | **Bug reference:** BUG-11
 
 ---
-### TC-30: User can select a State without selecting a city
+
+### TC-31: User can select a State without selecting a city
 
 **Description:**  Since the City and State field are consider optional, the user should be able to select a state and ignore the city field
 
@@ -845,20 +846,21 @@ For all test cases unless specified otherwise:
 **Steps:**
 1. Enter valid data in all required fields
 2. Select "NCR" in the State field
-3. Click Submit button
+3. Leave the city field in blank
+4. Click Submit button
 
 **Expected Result:**  
 - Form submitted successfully
 
 **Actual Result:**
 - Form submitted successfully
-- Summary window does not show the selected State
+- Summary window does not show the selected state
 
-**Status:** FAIL **Priority:** MEDIUM
+**Status:** FAIL | **Priority:** MEDIUM |  **Bug reference:** BUG-12
 
 ---
 
-### TC-31: Summary window can be closed
+### TC-32: Summary window can be closed
 
 **Description:**  Once the summary window appear it should be able to be closed by clicking the "Close" button
 
@@ -889,7 +891,7 @@ For all test cases unless specified otherwise:
 - Summary window cannot get closed by cliking the "Close" Button
 - Summary window can only get closed by clicking anywhere outside the window.
 
-**Status:** FAIL **Priority:** HIGH
+**Status:** FAIL | **Priority:** HIGH | **Bug reference:** BUG-13
 
 ---
 
