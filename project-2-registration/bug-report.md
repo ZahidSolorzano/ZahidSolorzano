@@ -100,3 +100,40 @@ For all bug reports unless specified otherwise:
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![last-name-numbers](./evidence/last-name-numbers.png) |
+
+### BUG-06: Last Name field allows special characters
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-09: Last Name - Rejects special characters |
+| **Description** | Last Name field allows user to enter special characters without any error message (besides spaces, hyphens, dots and apostrophes) |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
+| **Test Data** | Last Name: "Solorzano@#$" |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "Solorzano@#$" in Last Name field <br> 3. Click Submit button |
+| **Expected Result** | Form should not submit <br> Last Name field should be highlighted with a red outline |
+| **Actual Result** | Form submitted successfully <br> Last Name field accepts all special characters without error |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Low |
+| **Priority** | Medium |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![last-name-specials](./evidence/last-name-specials.png) |
+
+### BUG-07: Email has no character limit in the local par
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-10 Email - Character limit in the local part |
+| **Description** | Email field in the local part (before the @) has no character limit, accepts very long text (65+ characters) without any error message or truncation |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
+| **Test Data** | Email: (65 times "A") + "@example.com" |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 65 characters in Email fiel (type "A" 65 times before the @) then "example.com" <br> 3. Click Submit button |
+| **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
+| **Actual Result** | Form submitted successfully <br> Email field accepted very long text without any error or truncation in the local part |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Low |
+| **Priority** | Low |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![local-part-limit](./evidence/local-part-limit.png) |
+
