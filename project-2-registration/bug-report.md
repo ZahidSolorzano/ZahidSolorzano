@@ -27,7 +27,7 @@ For all bug reports unless specified otherwise:
 | **Priority** | Low |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
-| **Evidence** | ![first-name-no-limit](./evidence/first-name-no-limit.png) |
+| **Evidence** | ![first-name-no-limits](./evidence/first-name-no-limits.png) |
 
 ### BUG-02: First Name field allows numeric characters
 
