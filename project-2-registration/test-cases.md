@@ -169,7 +169,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-06: First Name - Reject special characters
+### TC-06: First Name - Rejects special characters
 
 **Description:** Verify that First Name field rejects input containing special characters (besides spaces, hyphens, dots and apostrophes)
 
@@ -568,6 +568,7 @@ For all test cases unless specified otherwise:
 **Status:** PASS | **Priority:** HIGH
 
 ---
+
 ### TC-21: Mobile - Length (Less than 10 digits)
 
 **Description:**  Verify Mobile field only accepts exactly 10 digits 
