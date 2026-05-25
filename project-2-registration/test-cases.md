@@ -171,7 +171,7 @@ For all test cases unless specified otherwise:
 
 ### TC-06: First Name - Reject special characters
 
-**Description:** Verify that First Name field rejects input containing special characters
+**Description:** Verify that First Name field rejects input containing special characters (besides spaces, hyphens, dots and apostrophes)
 
 **Preconditions:** 
 - User has navigated to the practice form 
@@ -201,8 +201,8 @@ For all test cases unless specified otherwise:
 **Description:** Verify that the Last Name field has a character limit or handles very long input appropriately
 
 **Preconditions:** 
-- User has navigated to https://demoqa.com/automation-practice-form
--  All other required fields filled with valid defaults
+- User has navigated to the practice formm
+- All other required fields filled with valid defaults
 
 **Test Data:** Last Name: 256 characters: "B" repeated 256 times
 
@@ -217,7 +217,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name field accepted very long text without any error
 
-**Status:** FAIL  **Priority:** LOW
+**Status:** FAIL | **Priority:** LOW | **Bug Reference** BUG-04
 
 ---
 
@@ -226,7 +226,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that Last Name field rejects input containing numbers
 
 **Preconditions:** 
-- Navigate to https://demoqa.com/automation-practice-form
+- User has navigated to the practice formm
 - All other required fields filled with valid defaults
 
 **Test Data:** Last Name: "Solorzano123"
@@ -244,16 +244,16 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name allows numeric characters.
 
-**Status:** FAIL  **Priority:**  MEDIUM
+**Status:** FAIL | **Priority:**  MEDIUM | **Bug Reference** BUG-05
 
 ---
 
 ### TC-09: Last Name - Rejects special characters
 
-**Description:** Verify Last Name field rejects input containing special characters
+**Description:** Verify Last Name field rejects input containing special characters (besides spaces, hyphens, dots and apostrophes)
 
 **Preconditions:** 
-- Navigate to https://demoqa.com/automation-practice-form
+- User has navigated to the practice formm
 - All other required fields filled with valid defaults
 
 **Test Data:** Last Name: "Solorzano@#$"
@@ -271,14 +271,14 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Last name field allows special characters.
 
-**Status:** FAIL  **Priority:**  MEDIUM
+**Status:** FAIL | **Priority:**  MEDIUM | **Bug Reference** BUG-06
 
 ### TC-10 Email - Character limit in the local part
 
-**Description:** Verify that the Email field has a character limit or handles very long input appropriately in the local part(before the @)
+**Description:** Verify that the Email field has a character limit or handles very long input appropriately in the local part (before the @)
 
 **Preconditions:** 
-- Navigate to https://demoqa.com/automation-practice-form
+- User has navigated to the practice formm
 - All required fields filled with valid defaults
 
 **Test Data:** Email: (65 times "A") + "@example.com"
