@@ -64,7 +64,8 @@ For all test cases unless specified otherwise:
 
 **Description:** User cannot successfully submit the registration form by leaving in blank all the fields.
 
-**Preconditions:** - Navigate to https://demoqa.com/automation-practice-form
+**Preconditions:** Navigate to https://demoqa.com/automation-practice-form
+
 **Steps:**
 1. Do not enter any data in any field
 2. Click Submit button
@@ -124,11 +125,11 @@ For all test cases unless specified otherwise:
 - Navigate to https://demoqa.com/automation-practice-form
 - All other required fields filled with valid defaults
 
-**Test Data:** First Name: 256 characters: "A" repeated 256 times
+**Test Data:** First Name: 51 characters: "A" repeated 51 times
 
 **Steps:**
 1. Enter valid data in all other required fields
-2. Enter 256 characters in First Name field (type "A" 256 times)
+2. Enter 51 characters in First Name field (type "A" 51 times)
 3. Click Submit button
 
 **Expected Result:**  The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
@@ -299,7 +300,7 @@ For all test cases unless specified otherwise:
 
 ---
 
-### TC-11 Email - Charcater limit in the domain part
+### TC-11 Email - Characater limit in the domain part
 
 **Description:** Verify that the Email field has a character limit or handles very long input appropriately in the domain part (after the @ and before the last dot)
 
@@ -322,9 +323,9 @@ For all test cases unless specified otherwise:
 
 **Status:** FAIL  | **Priority:** LOW  |  **Bug Reference** BUG-08
 
-### TC-12 Email - Charcater limit in the top level domain part
+### TC-12 Email - Characater limit in the top level domain part
 
-**Description:** Verify that the Email field has a character limit or handles very long input appropriately in the top level domain part (afterthe last dot)
+**Description:** Verify that the Email field has a character limit or handles very long input appropriately in the top level domain part (after the last dot)
 
 **Preconditions:** 
 - Navigate to https://demoqa.com/automation-practice-form
@@ -444,7 +445,7 @@ For all test cases unless specified otherwise:
 
 **Steps:**
 1. Enter valid data in all required fields
-2. Enter "carlostest@.com" in the email field
+2. Enter "carlostest@example."  in the email field
 3. Click Submit button
 
 **Expected Result:** 
