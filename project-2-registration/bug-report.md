@@ -53,7 +53,7 @@ For all bug reports unless specified otherwise:
 |-------|-------|
 | **Test Case** | TC-06: First Name - Reject special characters |
 | **Description** | First Name field allows user to enter special characters without any error message |
-| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> - All other required fields filled with valid defaults |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
 | **Test Data** | First Name: "Carlos@#$" |
 | **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "Carlos@#$" in First Name field <br> 3. Click Submit button |
 | **Expected Result** | Form should not submit <br> First Name field should be highlighted with a red outline |
