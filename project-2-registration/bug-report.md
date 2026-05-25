@@ -155,5 +155,60 @@ For all bug reports unless specified otherwise:
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![domain-part-limit](./evidence/domain-part-limit.png) |
 
+### BUG-09: Date of birth field allows future dates
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-23: Date of birth field rejects future dates |
+| **Description** | Date of birth field allows future dates without any errors or warnings|
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
+| **Test Data** | Date of birt: 05/24/2026 |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Select "05/24/2026" in Date of birt field <br> 3. Click Submit button |
+| **Expected Result** |Date of birth field gets highlighted with a red outline and Form should not submit|
+| **Actual Result** | Form submitted successfully <br> Date of birth field allows future dates|
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | High |
+| **Priority** | High|
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![future-date](./evidence/future-date.png) |
+
+### BUG-08: Picture field can allow non image formats
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | ### TC-27: Picture field can only allow image formats |
+| **Description** | Picture field can be used to upload files that are not images (like videos) |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
+| **Test Data** |  Picture: example.mp4 |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Upload example.mp4 in the picture field <br> 3. Click Submit button |
+| **Expected Result** |Picture field is highlighted with a red outline or shows a warning messag and form should not be submited |
+| **Actual Result** | User is allowed to upload non image files in the picture field <br> Form submitted successfully|
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | High|
+| **Priority** | Migh |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![non-image(./evidence/non-image.png) |
+
+
+### BUG-08: 
+
+| Field | Value |
+|-------|-------|
+| **Test Case** |  |
+| **Description** | |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
+| **Test Data** |  |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "carlostest@" + (type 65 times "A") + ".com" in the email field <br> 3. Click Submit button |
+| **Expected Result** |  |
+| **Actual Result** | |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Medium |
+| **Priority** | Medium |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![domain-part-limit](./evidence/domain-part-limit.png) |
+
 
 
