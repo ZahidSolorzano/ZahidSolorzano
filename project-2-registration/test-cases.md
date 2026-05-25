@@ -106,7 +106,7 @@ For all test cases unless specified otherwise:
 
 **Expected Result:** 
 - Form is submitted successfully
-- A modal window appears showing the summary of ALL entered data 
+- A modal window appears showing the summary of all entered data 
 
 **Actual Result:** 
 - Form submitted successfully
@@ -138,7 +138,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - First name field accepted very long text without any error
 
-**Status:** FAIL **Priority:** LOW
+**Status:** FAIL **Priority:** LOW **Bug reference:** BUG-01
 
 ---
 
