@@ -127,12 +127,12 @@ For all bug reports unless specified otherwise:
 | **Description** | Email field in the local part (before the @) has no character limit, accepts very long text (65+ characters) without any error message or truncation |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
 | **Test Data** | Email: (65 times "A") + "@example.com" |
-| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 65 characters in Email fiel (type "A" 65 times before the @) then "example.com" <br> 3. Click Submit button |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 65 characters in Email field (type "A" 65 times before the @) then "example.com" <br> 3. Click Submit button |
 | **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
 | **Actual Result** | Form submitted successfully <br> Email field accepted very long text without any error or truncation in the local part |
 | **Environment** | Windows 10, Google Chrome |
 | **Severity** | Low |
-| **Priority** | Medium |
+| **Priority** | Low|
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![local-part-limit](./evidence/local-part-limit.png) |
@@ -150,7 +150,7 @@ For all bug reports unless specified otherwise:
 | **Actual Result** | Form submitted successfully <br> Email field accepted very long text without any error or truncation in the domain part |
 | **Environment** | Windows 10, Google Chrome |
 | **Severity** | Low |
-| **Priority** | Medium |
+| **Priority** | Low |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![domain-part-limit](./evidence/domain-part-limit.png) |
@@ -162,7 +162,7 @@ For all bug reports unless specified otherwise:
 | **Test Case** | TC-23: Date of birth field rejects future dates |
 | **Description** | Date of birth field allows future dates without any errors or warnings|
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
-| **Test Data** | Date of birt: 05/24/2026 |
+| **Test Data** | Date of birth: 05/24/2026 |
 | **Steps** | 1. Enter valid data in all other required fields <br> 2. Select "05/24/2026" in Date of birt field <br> 3. Click Submit button |
 | **Expected Result** |Date of birth field gets highlighted with a red outline and Form should not submit|
 | **Actual Result** | Form submitted successfully <br> Date of birth field allows future dates|
@@ -182,11 +182,11 @@ For all bug reports unless specified otherwise:
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
 | **Test Data** |  Picture: example.mp4 |
 | **Steps** | 1. Enter valid data in all other required fields <br> 2. Upload example.mp4 in the picture field <br> 3. Click Submit button |
-| **Expected Result** |Picture field is highlighted with a red outline or shows a warning messag and form should not be submited |
+| **Expected Result** |Picture field is highlighted with a red outline or shows a warning messag and form should not be submitted |
 | **Actual Result** | User is allowed to upload non image files in the picture field <br> Form submitted successfully|
 | **Environment** | Windows 10, Google Chrome |
-| **Severity** | High|
-| **Priority** | Migh |
+| **Severity** | Medium |
+| **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![non-image](./evidence/non-image.png) |
@@ -222,7 +222,7 @@ For all bug reports unless specified otherwise:
 | **Actual Result** |Form submitted successfully <br> Summary window does not show the selected state|
 | **Environment** | Windows 10, Google Chrome |
 | **Severity** | Medium |
-| **Priority** | High |
+| **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![state](./evidence/state.png) |
@@ -238,10 +238,10 @@ For all bug reports unless specified otherwise:
 | **Test Data** | First Name: "Carlos" <br> Last Name: "Solorzano" <br> Gender: "Male" <br> Mobile: "1234567890" <br> Date of Birth: "12 Oct 2000" |
 | **Steps** | 1. Enter First Name: "Carlos" <br> 2. Enter Last Name: "Solorzano" <br> 3. Select Gender: "Male" <br> 4. Enter Mobile: "1234567890" <br> 5. Enter Date of Birth: "12 Oct 2000" <br> 6. Click Submit button <br> 7. Click Close button |
 | **Expected Result** | Form submitted successfully <br> Summary window can be closed by clicking the "Close" Button |
-| **Actual Result** | Form submitted successfully <br> Summary window cannot get closed by cliking the "Close" Button <br> Summary window can only get closed by clicking anywhere outside the window.|
+| **Actual Result** | Form submitted successfully <br> Summary window cannot get closed by clicking the "Close" Button <br> Summary window can only get closed by clicking anywhere outside the window.|
 | **Environment** | Windows 10, Google Chrome |
-| **Severity** | Medium |
-| **Priority** | Medium |
+| **Severity** | High |
+| **Priority** | High |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![close](./evidence/close.png) |
