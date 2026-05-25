@@ -273,6 +273,8 @@ For all test cases unless specified otherwise:
 
 **Status:** FAIL | **Priority:**  MEDIUM | **Bug Reference** BUG-06
 
+---
+
 ### TC-10 Email - Character limit in the local part
 
 **Description:** Verify that the Email field has a character limit or handles very long input appropriately in the local part (before the @)
@@ -285,7 +287,7 @@ For all test cases unless specified otherwise:
 
 **Steps:**
 - Enter valid data in all required fields
-- Enter 65 characters in Email fiel (type "A" 65 times before the @)
+- Enter 65 characters in Email fiel (type "A" 65 times before the @) then "example.com"
 - Click Submit button
 
 **Expected Result:** The system must handle long input in some way like reject with an error message, truncate automatically, or show a limit warning
@@ -294,7 +296,9 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the local part
 
-**Status:** FAIL **Priority:** LOW 
+**Status:** FAIL | **Priority:** LOW | **Bug Reference** BUG-07
+
+---
 
 ### TC-11 Email - Charcater limit in the domain part
 
@@ -317,7 +321,7 @@ For all test cases unless specified otherwise:
 - Form submitted successfully
 - Email field has no character limit in the domain part
 
-**Status:** FAIL  **Priority:** LOW 
+**Status:** FAIL  | **Priority:** LOW  |  **Bug Reference** BUG-08
 
 ### TC-12 Email - Charcater limit in the top level domain part
 
