@@ -16,10 +16,10 @@ For all bug reports unless specified otherwise:
 | Field | Value |
 |-------|-------|
 | **Test Case** | TC-04: First Name - Character limit |
-| **Description** | First Name field has no character limit, accepts very long text (256+ characters) without any error message or truncation |
+| **Description** | First Name field has no character limit, accepts very long text (51+ characters) without any error message or truncation |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
 | **Test Data** | First Name: 256 characters ("A" repeated 256 times) |
-| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 256 characters in First Name field (type "A" 256 times) <br> 3. Click Submit button |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 51 characters in First Name field (type "A" 51 times) <br> 3. Click Submit button |
 | **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
 | **Actual Result** | Form submitted successfully <br> First Name field accepted very long text without any error or truncation. |
 | **Environment** | Windows 10, Google Chrome |
@@ -70,10 +70,10 @@ For all bug reports unless specified otherwise:
 | Field | Value |
 |-------|-------|
 | **Test Case** | TC-07: Last Name - Character limit |
-| **Description** | Last Name field has no character limit, accepts very long text (256+ characters) without any error message or truncation |
+| **Description** | Last Name field has no character limit, accepts very long text (51+ characters) without any error message or truncation |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
-| **Test Data** | Last Name: 256 characters: "B" repeated 256 times |
-| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 256 characters in Last Name field (type "B" 256 times) <br> 3. Click Submit button |
+| **Test Data** | Last Name: 256 characters: "B" repeated 51 times |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter 256 characters in Last Name field (type "B" 51 times) <br> 3. Click Submit button |
 | **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
 | **Actual Result** | Form submitted successfully <br> Last Name field accepted very long text without any error or truncation. |
 | **Environment** | Windows 10, Google Chrome |
@@ -173,7 +173,7 @@ For all bug reports unless specified otherwise:
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![future-date](./evidence/future-date.png) |
 
-### BUG-08: Picture field can allow non image formats
+### BUG-10: Picture field can allow non image formats
 
 | Field | Value |
 |-------|-------|
@@ -189,26 +189,62 @@ For all bug reports unless specified otherwise:
 | **Priority** | Migh |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
-| **Evidence** | ![non-image(./evidence/non-image.png) |
+| **Evidence** | ![non-image](./evidence/non-image.png) |
 
-
-### BUG-08: 
+### BUG-11: Address field has no character limit 
 
 | Field | Value |
 |-------|-------|
-| **Test Case** |  |
-| **Description** | |
+| **Test Case** | TC-29: Address - Character limit  |
+| **Description** | Address field has no character limit, accepts very long text (201+ characters) without any error message or truncation |
 | **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
-| **Test Data** |  |
-| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "carlostest@" + (type 65 times "A") + ".com" in the email field <br> 3. Click Submit button |
-| **Expected Result** |  |
-| **Actual Result** | |
+| **Test Data** | Address: Type "C" 500 times |
+| **Steps** | 1. Enter valid data in all required fields <br> 2. Enter 201 characters in address field (type "C" 201 times) <br> 3. Click Submit button |
+| **Expected Result** | System should handle long input appropriately (error message, truncation, or limit warning) |
+| **Actual Result** | Form submitted successfully <br> Address field accepted very long text without any error or truncation. |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Low |
+| **Priority** | Low |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![address-limit](./evidence/address-limit.png) |
+
+### BUG-12: Selected state does not show in the summary window
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-30: User can select a State without selecting a city |
+| **Description** | Since the City and State field are consider optional, the user should be able to select a state and ignore the city field, however when user does this , the selected state does not shows in the summary window|
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All required fields filled with valid defaults |
+| **Test Data** | State: "NCR" |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Select "NCR" in the State field <br> 3. Leave the city field in blank <br> 4. Click Submit button |
+| **Expected Result** | Form submitted successfully <br> Selected state shows in the summary window |
+| **Actual Result** |Form submitted successfully <br> Summary window does not show the selected state|
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Medium |
+| **Priority** | High |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![state](./evidence/state.png) |
+
+
+### BUG-13:  Summary window cannot be closed with the "close" button
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | ### TC-31: Summary window can be closed |
+| **Description** | Once the summary window appear it should be able to be closed by clicking the "Close" button, instead the "Close" button does nothing and Summary window can only get closed by clicking anywhere outside the window.|
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form  |
+| **Test Data** | First Name: "Carlos" <br> Last Name: "Solorzano" <br> Gender: "Male" <br> Mobile: "1234567890" <br> Date of Birth: "12 Oct 2000" |
+| **Steps** | 1. Enter First Name: "Carlos" <br> 2. Enter Last Name: "Solorzano" <br> 3. Select Gender: "Male" <br> 4. Enter Mobile: "1234567890" <br> 5. Enter Date of Birth: "12 Oct 2000" <br> 6. Click Submit button <br> 7. Click Close button |
+| **Expected Result** | Form submitted successfully <br> Summary window can be closed by clicking the "Close" Button |
+| **Actual Result** | Form submitted successfully <br> Summary window cannot get closed by cliking the "Close" Button <br> Summary window can only get closed by clicking anywhere outside the window.|
 | **Environment** | Windows 10, Google Chrome |
 | **Severity** | Medium |
 | **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
-| **Evidence** | ![domain-part-limit](./evidence/domain-part-limit.png) |
+| **Evidence** | ![close](./evidence/close.png) |
 
 
 
