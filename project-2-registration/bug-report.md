@@ -35,7 +35,7 @@ For all bug reports unless specified otherwise:
 |-------|-------|
 | **Test Case** | TC-05: First Name - Rejects numeric characters |
 | **Description** | First Name field allows user to enter numeric characters without any error message |
-| **Preconditions** | - User navigated to https://demoqa.com/automation-practice-form <br> - All other required fields filled with valid defaults |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> All other required fields filled with valid defaults |
 | **Test Data** | First Name: "Carlos123" |
 | **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "Carlos123" in First Name field <br> 3. Click Submit button |
 | **Expected Result** | Form should not submit <br> First Name field should be highlighted with a red outline |
@@ -46,3 +46,21 @@ For all bug reports unless specified otherwise:
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
 | **Evidence** | ![first-name-numbers](./evidence/first-name-numbers.png) |
+
+### BUG-03: First Name field allows special characters
+
+| Field | Value |
+|-------|-------|
+| **Test Case** | TC-06: First Name - Reject special characters |
+| **Description** | First Name field allows user to enter special characters without any error message |
+| **Preconditions** | User navigated to https://demoqa.com/automation-practice-form <br> - All other required fields filled with valid defaults |
+| **Test Data** | First Name: "Carlos@#$" |
+| **Steps** | 1. Enter valid data in all other required fields <br> 2. Enter "Carlos@#$" in First Name field <br> 3. Click Submit button |
+| **Expected Result** | Form should not submit <br> First Name field should be highlighted with a red outline |
+| **Actual Result** | Form submitted successfully <br> First Name field accepts special characters without error |
+| **Environment** | Windows 10, Google Chrome |
+| **Severity** | Low |
+| **Priority** | Medium |
+| **Status** | Open |
+| **Reported By** | Zahid Solorzano |
+| **Evidence** | ![first-name-specials](./evidence/first-name-specials.png) |
