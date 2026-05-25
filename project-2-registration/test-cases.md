@@ -1,4 +1,4 @@
-# Test Cases - Student Form Functionality
+# Test Cases - Practice Form Functionality
 
 ## Default Test Data
 For all test cases unless specified otherwise:
