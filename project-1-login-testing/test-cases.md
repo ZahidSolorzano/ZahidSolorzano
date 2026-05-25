@@ -142,22 +142,7 @@
 |**Priority** | MEDIUM |
 ---
 
-### TC-11: Login with error_user
-
-| Field | Value |
-|-------|-------|
-| **Description** | Verify that error_user can log in but experiences failures in cart/checkout actions |
-| **Preconditions** | User is on https://www.saucedemo.com |
-| **Test Data** | Username: "error_user", Password: "secret_sauce" |
-| **Steps** | 1. Enter username: "error_user" <br> 2. Enter password: "secret_sauce" <br> 3. Click "Login" button|
-| **Expected Result** | Login should be successful <br> Cart or checkout actions should FAIL |
-| **Actual Result** | Login successful, User logins to the inventory page with 6 items already added to the cart that cannot be removed |
-| **Status** | PASS |
-|**Priority** | HIGH |
-|**Note**	| The cart and invetory buttons failing is an intended behavior for this test account, not a bug|
----
-
-### TC-12: Login with visual_user
+### TC-11: Login with visual_user
 
 | Field | Value |
 |-------|-------|
@@ -166,7 +151,7 @@
 | **Test Data** | Username: "visual_user", Password: "secret_sauce" |
 | **Steps** | 1. Enter username: "visual_user" <br> 2. Enter password: "secret_sauce" <br> 3. Click "Login" button <br> 4. Observe product images and layout <br> 5. Compare with standard_user view |
 | **Expected Result** | Login should be successful <br> UI elements may appear incorrect |
-| **Actual Result** | Login successful, Incorrect item names in the inventory page |
+| **Actual Result** | Login successful <br> Incorrect item names in the inventory page <br> Incorrect item images in the inventory page |
 | **Status** | PASS |
 |**Priority** | HIGH |
 |**Note**	| UI elements failing is an intended behavior for this test account, not a bug|
