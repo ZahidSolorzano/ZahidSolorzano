@@ -174,7 +174,7 @@ For all test cases unless specified otherwise:
 **Description:** Verify that First Name field rejects input containing special characters
 
 **Preconditions:** 
-- Navigate to https://demoqa.com/automation-practice-form
+- User has navigated to the practice form 
 - All other required fields filled with valid defaults
 
 **Test Data:** First Name: "Carlos@#$"
@@ -192,7 +192,7 @@ For all test cases unless specified otherwise:
 - Form is submitted successfully
 - First name allows special characters.
 
-**Status:** FAIL  **Priority:** MEDIUM
+**Status:** FAIL | **Priority:** MEDIUM | **Bug Reference** BUG-03
 
 ---
 
