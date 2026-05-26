@@ -4,7 +4,7 @@ Aspirant for Junior Tester position
 
 ## Links
 [![My CV](https://img.shields.io/badge/my_cV-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/ZahidSolorzano)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carlos-solorzano-escobar-bb1b3939a/) 
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/zahid-solorzano-escobar-793320401) 
 Email: soec001210@itsuruapan.edu.mx
 
 # Hi, I'm Zahid! 👋
