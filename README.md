@@ -23,9 +23,6 @@ I'm a Computer Systems Engineer with strong attention to detail, documentation s
 - ✅ Remote work experience (4+ years)
 - ✅ Technical background (SQL, Excel, Jira, Trello)
 
-
-"I've spent years ensuring accuracy in medical communications. Now I want to ensure quality in software."
-
 ## 🛠️ Tools & Platforms I Use
 | Category | Tools |
 |----------|-------|
