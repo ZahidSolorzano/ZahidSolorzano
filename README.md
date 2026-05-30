@@ -20,24 +20,22 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 - ✅ Proactive follow-up & task ownership  
 - ✅ Fast learner of new tools 
 - ✅ English C2+ Spanish native
-- ✅ Remote work experience (4+ years)
-- ✅ Technical background (SQL, Excel, Jira, Trello)
+- ✅ Remote work experience
+- ✅ Technical background 
 
 ## Core Competencies
-| Skill | Description |
-|-------|-------------|
-| Test case design | Positive, negative, edge, and boundary scenarios |
-| Bug reporting | Detailed reports with severity, steps, and evidence |
-| Test documentation | Test plans, test summaries, checklists |
-| Version control | Git & GitHub basics (commits, push, pull, branches) |
-| Tools | Jira, Trello, Excel, Google Sheets, Zendesk, Five9 |
+- Test case design & execution
+- Bug reporting & documentation
+- Attention to detail (HIPAA compliance)
+- Proactive follow-up & task ownership
+- Remote work discipline (3+ years)
 
-## Technical Background
-| Area | Technologies |
-|------|--------------|
-| Programming | Java, PHP, HTML, CSS, SQL |
-| Databases | MySQL, SQL queries |
-| Tools | VS Code, Android Studio, NetBeans, XAMPP |
+## Technical Toolkit
+| Category | Tools & Technologies |
+|----------|----------------------|
+| QA & Tracking | Jira, Trello, Zendesk, Excel, Google Sheets |
+| Development | Java, PHP, HTML, CSS, SQL, MySQL |
+| Dev Environment | VS Code, Android Studio, NetBeans, XAMPP |
 | Version Control | Git, GitHub |
 
 ##  Portfolio Projects
