@@ -30,7 +30,7 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 | Bug reporting | Detailed reports with severity, steps, and evidence |
 | Test documentation | Test plans, test summaries, checklists |
 | Version control | Git & GitHub basics (commits, push, pull, branches) |
-| Tools | Jira, Trello, Excel, Google Sheets, Screenshot tools, Zendesk |
+| Tools | Jira, Trello, Excel, Google Sheets, Zendesk. Five9 |
 
 ##  Portfolio Projects
 
