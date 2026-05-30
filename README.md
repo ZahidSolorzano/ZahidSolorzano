@@ -32,6 +32,14 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 | Version control | Git & GitHub basics (commits, push, pull, branches) |
 | Tools | Jira, Trello, Excel, Google Sheets, Zendesk, Five9 |
 
+## Technical Background
+| Area | Technologies |
+|------|--------------|
+| Programming | Java, PHP, HTML, CSS, SQL |
+| Databases | MySQL, SQL queries |
+| Tools | VS Code, Android Studio, NetBeans, XAMPP |
+| Version Control | Git, GitHub |
+
 ##  Portfolio Projects
 
 ### Project 1: Login Page Testing
@@ -58,10 +66,14 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 📄 [View test cases](./project-2-registration/test-cases.md)  
 🐞 [View bug reports](./project-2-registration/bug-report.md)
 
-## Technical Background
-| Area | Technologies |
-|------|--------------|
-| Programming | Java, PHP, HTML, CSS, SQL |
-| Databases | MySQL, SQL queries |
-| Tools | VS Code, Android Studio, NetBeans, XAMPP |
-| Version Control | Git, GitHub |
+### Equipment Loan Tracking System — CFE
+*PHP, MySQL, HTML, XAMPP | University Professional Practices*
+
+Complete CRUD system for IT employees to track equipment loans (laptops, tools, devices). Features: check-in/check-out, due date tracking, borrower history, and return status. Demonstrates inventory tracking, follow-up discipline, and record keeping — skills directly applicable to logistics coordination.
+
+### School Administrative Management System
+*PHP, MySQL, HTML, XAMPP | University Social Service*
+
+CRUD system for high school teachers to create, save, download, and manage administrative documents. Implemented 3 user roles (admin, teacher, viewer) with different permission levels. Demonstrates understanding of structured processes, data accuracy, and multi-user coordination.
+
+
