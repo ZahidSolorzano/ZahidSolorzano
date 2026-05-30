@@ -20,7 +20,7 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 - ✅ Proactive follow-up & task ownership  
 - ✅ Fast learner of new tools 
 - ✅ English C2+ Spanish native
-- ✅ Remote work experience (3+ years)
+- ✅ Remote work experience (4+ years)
 - ✅ Technical background (SQL, Excel, Jira, Trello)
 
 ## Core Competencies
