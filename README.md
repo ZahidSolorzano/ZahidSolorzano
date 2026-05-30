@@ -28,7 +28,7 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 - Bug reporting & documentation
 - Attention to detail (HIPAA compliance)
 - Proactive follow-up & task ownership
-- Remote work discipline (3+ years)
+- Remote work discipline (4+ years)
 
 ## Technical Toolkit
 | Category | Tools & Technologies |
