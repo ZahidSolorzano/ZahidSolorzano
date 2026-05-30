@@ -70,7 +70,7 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 
 Complete CRUD system for IT employees to track equipment loans (laptops, tools, devices). Features: check-in/check-out, due date tracking, borrower history, and return status. Demonstrates inventory tracking, follow-up discipline, and record keeping — skills directly applicable to logistics coordination.
 
-🔗 [View full project](https://github.com/ZahidSolorzano/project-cfe-equipment-loan)
+🔗 [View full project](https://github.com/ZahidSolorzano/ZahidSolorzano/tree/main/project-cfe-equipment-loan)
 
 ### School Administrative Management System
 *PHP, MySQL, HTML, XAMPP | University Social Service*
