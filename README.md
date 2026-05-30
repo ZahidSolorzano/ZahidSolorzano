@@ -33,10 +33,11 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 ## Technical Toolkit
 | Category | Tools & Technologies |
 |----------|----------------------|
-| QA & Tracking | Jira, Trello, Zendesk, Excel, Google Sheets |
+| QA & Tracking | Jira, Trello, Excel, Google Sheets |
 | Development | Java, PHP, HTML, CSS, SQL, MySQL |
 | Dev Environment | VS Code, Android Studio, NetBeans, XAMPP |
 | Version Control | Git, GitHub |
+| Communication | Zendesk, Five9| 
 
 ##  Portfolio Projects
 
