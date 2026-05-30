@@ -77,4 +77,5 @@ Complete CRUD system for IT employees to track equipment loans (laptops, tools, 
 
 CRUD system for high school teachers to create, save, download, and manage administrative documents. Implemented 3 user roles (admin, teacher, viewer) with different permission levels. Demonstrates understanding of structured processes, data accuracy, and multi-user coordination.
 
+🔗 [View full project](https://github.com/ZahidSolorzano/ZahidSolorzano/tree/main/project-school-admin-system)
 
