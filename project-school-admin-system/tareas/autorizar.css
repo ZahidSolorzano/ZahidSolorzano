@@ -1,0 +1,101 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f9f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2e7d32;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0f2e9;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+strong {
+    color: #2e7d32;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+.form-group div {
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background-color: #f1f8e9;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #a5d6a7;
+}
+
+.form-group div:hover {
+    background-color: #e8f5e9;
+    transform: translateX(5px);
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #4caf50;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #3d8b40;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #bdbdbd;
+}
