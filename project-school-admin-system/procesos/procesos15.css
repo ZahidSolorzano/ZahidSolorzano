@@ -1,0 +1,367 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f9f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #2c5e2e;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #7ab55c;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    background-color: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #1b5e20;
+}
+
+/* Formulario de nuevo proceso */
+form {
+    background-color: #f0f7f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #2e7d32;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2e7d32;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+/* Botones - Estilo consistente con la referencia */
+.action-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Colores específicos para cada tipo de botón */
+.action-button.view {
+    background-color: #2e7d32; /* Verde */
+}
+
+.action-button.download {
+    background-color: #3498db; /* Azul */
+}
+
+.action-button.edit {
+    background-color: #f39c12; /* Naranja */
+}
+
+.action-button.delete {
+    background-color: #e74c3c; /* Rojo */
+}
+
+/* Contenedores para grupos de botones */
+.action-buttons-top,
+.action-buttons-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Tabla de procesos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: 500;
+}
+
+th a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f9f5;
+}
+
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Estados */
+.estado-completo {
+    color: #2e7d32;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: #e8f5e9;
+}
+
+.estado-progreso {
+    color: #e67e22;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: #fef9e7;
+}
+
+/* Acciones */
+.acciones a {
+    color: #2e7d32;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.acciones a:hover {
+    background-color: #e8f5e9;
+    text-decoration: underline;
+}
+
+/* Formularios de descarga */
+.download-forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.download-form {
+    background-color: #f0f7f0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #2e7d32;
+    flex: 1;
+    min-width: 300px;
+}
+
+.download-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #a5d6a7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.download-btn:hover {
+    background-color: #1b5e20;
+}
+
+.download-btn.download-all {
+    background-color: #27ae60;
+}
+
+.download-btn.download-all:hover {
+    background-color: #219653;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .download-forms {
+        flex-direction: column;
+    }
+    
+    .download-form {
+        width: 100%;
+    }
+}
+
+/* Tooltip para descripción */
+.tooltip-cell {
+    position: relative;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+/* Tooltip oculto por defecto */
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -150px;
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+    width: 300px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Flecha del tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2e7d32 transparent transparent transparent;
+}
+
+/* Mostrar tooltip al hacer hover */
+.tooltip-cell:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Botones de acción como cajitas */
+.acciones-fila {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin: 3px 0;
+    justify-content: flex-start;
+}
+
+.acciones-fila a {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1;
+    text-align: center;
+    max-width: 90px;
+    white-space: nowrap;
+}
+
+/* Colores para cada tipo de acción */
+.acciones-fila a[href*="ver_proceso"] {
+    background-color: #2e7d32; /* Verde */
+    border: 1px solid #1b5e20;
+}
+
+.acciones-fila a[href*="descargar"] {
+    background-color: #3498db; /* Azul */
+    border: 1px solid #2980b9;
+}
+
+.acciones-fila a[href*="editar"] {
+    background-color: #f39c12; /* Naranja */
+    border: 1px solid #e67e22;
+}
+
+.acciones-fila a[href*="eliminar"] {
+    background-color: #e74c3c; /* Rojo */
+    border: 1px solid #c0392b;
+}
+
+/* Efectos hover */
+.acciones-fila a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    opacity: 0.9;
+}
+
+/* Mejora para el contenedor de acciones */
+td:last-child {
+    min-width: 200px;
+    max-width: 220px;
+}
