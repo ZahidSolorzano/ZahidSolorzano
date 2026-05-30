@@ -13,24 +13,24 @@ Email: zahid.solorzanoescobar@gmail.com
 Uruapan, Michoacan, Mexico | 100% remote ready
 
 ## 🚀 About Me
-I'm a Computer Systems Engineer with strong attention to detail, documentation skills, and experience in remote coordination. I've spent 3+ years in client-facing roles requiring accuracy, follow-up, and confidentiality (HIPAA). 
+I'm a Computer Systems Engineer with a strong foundation in programming (Java, PHP, SQL) and problem-solving. While my professional background has been in medical interpretation and customer support, I'm now pivoting into Software Quality Assurance, combining my technical knowledge with my attention to detail and communication skills.
 
-## What I bring to the table:
+**What I bring to any operations or quality role:**
 - ✅ Attention to detail & documentation discipline
 - ✅ Proactive follow-up & task ownership  
 - ✅ Fast learner of new tools 
-- ✅ English C2 + Spanish native
-- ✅ Remote work experience (4+ years)
+- ✅ English C2+ Spanish native
+- ✅ Remote work experience (3+ years)
 - ✅ Technical background (SQL, Excel, Jira, Trello)
 
-## 🛠️ Tools & Platforms I Use
-| Category | Tools |
-|----------|-------|
-| **Task & client tracking** | Jira, Trello, Zendesk, Excel, Google Sheets |
-| **Documentation** | Markdown, screenshot tools, bug trackers |
-| **Communication** | Phone, email, chat, video calls |
-| **Data & records** | SQL, CRM basics, data entry |
-| **Version control** | Git, GitHub |
+## Testing Skills
+| Skill | Description |
+|-------|-------------|
+| Test case design | Positive, negative, edge, and boundary scenarios |
+| Bug reporting | Detailed reports with severity, steps, and evidence |
+| Test documentation | Test plans, test summaries, checklists |
+| Version control | Git & GitHub basics (commits, push, pull, branches) |
+| Tools | Jira, Trello, Excel, Google Sheets, screenshot tools |
 
 ##  Portfolio Projects
 
@@ -41,7 +41,6 @@ I'm a Computer Systems Engineer with strong attention to detail, documentation s
 - ✅ Created 11 test cases
 - 🐞 Found and reported 1 bug
 - 📸 Documented with screenshots
-- 📖 Organized findings in a clear, shareable format
 
 🎫 [View test plan](./project-1-login-testing/test-plan.md)
 📄 [View test cases](./project-1-login-testing/test-cases.md)  
@@ -54,7 +53,6 @@ I'm a Computer Systems Engineer with strong attention to detail, documentation s
 - ✅ Created 32 test cases
 - 🐞 Found and reported 13 bugs
 - 📸 Documented with screenshots
-- 📖 Organized findings in a clear, shareable format
 
 🎫 [View test plan](./project-2-registration/test-plan.md)
 📄 [View test cases](./project-2-registration/test-cases.md)  
