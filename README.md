@@ -23,14 +23,14 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 - ✅ Remote work experience (3+ years)
 - ✅ Technical background (SQL, Excel, Jira, Trello)
 
-## Testing Skills
+## Core Competencies
 | Skill | Description |
 |-------|-------------|
 | Test case design | Positive, negative, edge, and boundary scenarios |
 | Bug reporting | Detailed reports with severity, steps, and evidence |
 | Test documentation | Test plans, test summaries, checklists |
 | Version control | Git & GitHub basics (commits, push, pull, branches) |
-| Tools | Jira, Trello, Excel, Google Sheets, screenshot tools |
+| Tools | Jira, Trello, Excel, Google Sheets, Screenshot tools, Zendesk |
 
 ##  Portfolio Projects
 
