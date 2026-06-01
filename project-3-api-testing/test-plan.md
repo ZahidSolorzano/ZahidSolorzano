@@ -1,9 +1,13 @@
 # Test Plan - Airport Gap API Testing
 
-**Project:** Airport Gap API Testing
+**Project:**Airport Gap API Testing
+
 **Tester:** Zahid Solorzano
+
 **Base URL:** https://airportgap.com/api
+
 **Tool:** Postman
+
 
 ## Scope
 
