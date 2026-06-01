@@ -39,7 +39,7 @@ All requests require a token:
 ## Test Environment
 | Component | Details |
 |-----------|---------|
-| API URL | https://jsonplaceholder.typicode.com |
+| API URL | https://airportgap.com/api |
 | Tool | Postman v10+ |
 | OS | Windows 10 |
 
