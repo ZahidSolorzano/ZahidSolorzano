@@ -1,33 +1,40 @@
-# Test Plan - JSONPlaceholder API Testing
+# Test Plan - Airport Gap API Testing
 
-## Project Overview
-- **Application:** JSONPlaceholder (fake REST API)
-- **Base URL:** https://jsonplaceholder.typicode.com
-- **Tester:** Zahid Solorzano
-- **Tool:** Postman
+**Project:** Airport Gap API Testing
+**Tester:** Zahid Solorzano
+**Base URL:** https://airportgap.com/api
+**Tool:** Postman
 
 ## Scope
+
 ### In Scope
-- Test /posts endpoint
-- Methods: GET, POST, PUT, PATCH, DELETE
-- Validate status codes and response structure
+- Authentication (Token)
+- GET /airports — get all airports
+- GET /airports/:id — get specific airport
+- GET /airports/distance — calculate distance between two airports
+- POST /favorites — save a favorite airport
+- GET /favorites — list favorite airports
+- DELETE /favorites/:id — remove a favorite
 - Positive and negative test cases
 
 ### Out of Scope
-- Authentication (not required)
 - Performance/Load testing
-- Other endpoints (/users, /comments)
+- Security testing beyond authentication
 
 ## Endpoints to Test
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | /posts | Get all posts |
-| GET | /posts/1 | Get a specific post |
-| POST | /posts | Create a new post |
-| PUT | /posts/1 | Update a post (full) |
-| PATCH | /posts/1 | Update a post (partial) |
-| DELETE | /posts/1 | Delete a post |
+| GET | /airports | Get list of airports |
+| GET | /airports/:id | Get specific airport |
+| GET | /airports/distance | Calculate distance between airports |
+| POST | /favorites | Add airport to favorites |
+| GET | /favorites | Get my favorite airports |
+| DELETE | /favorites/:id | Remove airport from favorites |
+
+## Authentication
+All requests require a token:
+
 
 ## Test Environment
 | Component | Details |
