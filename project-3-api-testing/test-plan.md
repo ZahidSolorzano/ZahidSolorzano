@@ -33,7 +33,7 @@
 | DELETE | /favorites/:id | Remove airport from favorites |
 
 ## Authentication
-All requests require a token:
+All requests require a token: 32MAXs3SX4oHVmWc5L74fbcG
 
 
 ## Test Environment
