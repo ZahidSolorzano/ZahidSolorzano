@@ -22,3 +22,15 @@
 | **Expected Result** | Status 200 <br> Airport id = "GKA" <br> Name contains "Goroka" |
 | **Actual Result** | Status 200, id=GKA, name="Goroka Airport"| 
 | **Status** | PASS |
+
+### API-TC-03: GET /airports/:id — Airport not found
+
+| Field | Value |
+|----|----|
+|**Description** | Verify GET with invalid airport ID returns 404 |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: GET, Url: https://airportgap.com/api/airports/XYZ123 |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports/XYZ123 <br> 5. Click Send |
+| **Expected Result** | Status 404 Not Found |
+| **Actual Result** | Status 404 Not Found| 
+| **Status** | PASS |
