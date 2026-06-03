@@ -34,3 +34,13 @@
 | **Expected Result** | Status 404 Not Found |
 | **Actual Result** | Status 404 Not Found| 
 | **Status** | PASS |
+
+### API-TC-04: GET /airports/distance — Calculate distance
+
+|**Description** | Verify distance between two airports is calculated correctly |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: GET, Url: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG <br> 5. Click Send |
+| **Expected Result** | Status 200,  distance calculated |
+| **Actual Result** | Status 200, Response includes distance in miles and kilometers| 
+| **Status** | PASS |
