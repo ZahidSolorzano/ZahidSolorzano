@@ -72,3 +72,39 @@
 | **Expected Result** | 	Status 201, favorite created |
 | **Actual Result** | Status 201 Created <br> Response includes the favorite airport| 
 | **Status** | PASS |
+
+### API-TC-07: POST /favorites — Add duplicate airport
+
+| Field | Value |
+|----|----|
+|**Description** | 	Verify adding same airport twice returns error |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" }|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5.Enter Body:{ "airport_id": "GKA" } <br> 6. Click Send |
+| **Expected Result** | Status 422, error message |
+| **Actual Result** | Status 422 Unprocessable Entity <br> Error: airport already in favorites| 
+| **Status** | PASS |
+
+### API-TC-08: POST /favorites — Missing airport_id
+
+| Field | Value |
+|----|----|
+|**Description** | 	Verify error when airport_id is missing |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { }|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5.Enter Body:{ } <br> 6. Click Send |
+| **Expected Result** | 	Status 400 Bad Request |
+| **Actual Result** | Status 400, error: "airport_id is required"| 
+| **Status** | PASS |
+
+### API-TC-09: GET /favorites — Get my favorite airports
+
+| Field | Value |
+|----|----|
+|**Description** | Verify GET /favorites returns list of user's favorite airports |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: GET, Url: https://airportgap.com/api/favorites |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. Click Send|
+| **Expected Result** | Status 200, Response includes previously added favorites|
+| **Actual Result** | Status 200, includes GKA | 
+| **Status** | PASS |
