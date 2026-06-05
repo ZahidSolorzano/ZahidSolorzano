@@ -5,9 +5,10 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify that GET /airports returns a list of airports |
+|**Preconditions** |  Open Postman |
 | **Method** | GET |
 | **URL** | https://airportgap.com/api/airports |
-|**Steps** | 1. Open Postman <br> 2. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports<br> 5. Click Send |
+|**Steps** | 1. Open Postman <br> 2. Create a new collection named "Airports" <br> 3. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports <br> 5. Click Send |
 | **Headers** | 	Authorization: Token 32MAXs3SX4oHVmWc5L74fbcG |
 | **Expected Result** | Status 200 OK <br> Response has data array <br> Each airport has id, type, attributes |
 | **Actual Result** | Status 200, array of airports | 
@@ -42,7 +43,7 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify distance between two airports is calculated correctly |
-| **Preconditions** | Open Postman|
+| **Preconditions** | Open Postman, Open Collection named Airports|
 | **Test Data**  |Method: POST, Url: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG |
 |**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG <br> 5. Click Send |
 | **Expected Result** | Status 200,  distance calculated |
