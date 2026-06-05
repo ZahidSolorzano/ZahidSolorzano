@@ -108,3 +108,39 @@
 | **Expected Result** | Status 200, Response includes previously added favorites|
 | **Actual Result** | Status 200, includes GKA | 
 | **Status** | PASS |
+
+### API-TC-10: DELETE /favorites/:id — Remove favorite
+
+| Field | Value |
+|----|----|
+|**Description** | Verify user can delete a favorite airport |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: DELETE, Url:https://airportgap.com/api/favorites/GKA |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL:https://airportgap.com/api/favorites/GKA <br> 5. Click Send|
+| **Expected Result** | Status 204 No Content|
+| **Actual Result** | Status 204 | 
+| **Status** | PASS |
+
+### API-TC-11: DELETE /favorites/:id — Delete non-existent favorite
+
+| Field | Value |
+|----|----|
+|**Description** | Verify error when deleting a favorite that doesn't exist |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: GET, Url: https://airportgap.com/api/favorites/999 |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites/999 <br> 5. Click Send|
+| **Expected Result** | Status 404 Not Found |
+| **Actual Result** | Status 404 | 
+| **Status** | PASS |
+
+### API-TC-12: Request without authentication token
+
+| Field | Value |
+|----|----|
+|**Description** | Verify API rejects requests without valid token |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: GET, Url: https://airportgap.com/api/airports |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports <br> 5. Click Send|
+| **Expected Result** | Status 401 Unauthorized|
+| **Actual Result** | Status 401, error message| 
+| **Status** | PASS |
