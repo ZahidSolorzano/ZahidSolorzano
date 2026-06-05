@@ -1,3 +1,5 @@
+## Test Cases
+
 ### API-TC-01: GET /airports — Gets all airports
 
 | Field | Value |
@@ -49,13 +51,24 @@
 
 ### API-TC-05: GET /airports/distance — Missing parameters
 
-
 | Field | Value |
 |----|----|
 |**Description** | Verify distance between two airports is calculated correctly |
 | **Preconditions** | Open Postman|
 | **Test Data**  |Method: POST, Url: 	https://airportgap.com/api/airports/distance?from=GKA |
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: 	https://airportgap.com/api/airports/distance?from=GKA <br> 5. Click Send |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=GKA <br> 5. Click Send |
 | **Expected Result** | Status 400 Bad Request <br> Error message explains missing parameter |
 | **Actual Result** | Status 400, error: "to parameter is required | 
+| **Status** | PASS |
+
+### API-TC-06: POST /favorites — Add airport to favorites
+
+| Field | Value |
+|----|----|
+|**Description** | 	Verify user can add an airport to favorites |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" }|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5.Enter Body:{ "airport_id": "GKA" } <br> 6. Click Send |
+| **Expected Result** | 	Status 201, favorite created |
+| **Actual Result** | Status 201 Created <br> Response includes the favorite airport| 
 | **Status** | PASS |
