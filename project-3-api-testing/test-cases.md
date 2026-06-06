@@ -1,5 +1,20 @@
 # Test Cases - Airport Gap Functionality
 
+## Setup: Obtaining an Authentication Token
+
+**Steps to get your token:**
+
+1. Go to https://airportgap.com
+2. Click Generate Token
+3. Enter Email "examplezahid@test.com"
+4. Enter Password "portfolio"
+5. Copy provided token (32MAXs3SX4oHVmWc5L74fbcG)
+6. In Postman, in the authentication tab
+   - Auth type: `Bearer Token`
+   - Token: `32MAXs3SX4oHVmWc5L74fbcG`
+
+**Note:** For all test cases below, "valid Bearer token" refers to the token obtained using these steps.
+
 ### API-TC-01: Gets all airports
 
 | Field | Value |
@@ -42,13 +57,13 @@
 ### API-TC-04: Add airport to favorites
 
 | Field | Value |
-|----|----|
-|**Description** | 	Verify user can add an airport to favorites |
-|**Preconditions** |  Open Postman <br> Open collection "Airports" <br> User has no existing favorites or the test airport is not in favorites |
-| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { "airport_id": "GKA" } <br> 7. Click Send |
-| **Expected Result** | 	Status 201, favorite created |
-| **Actual Result** | Status 201 Created <br> Response includes the favorite airport| 
+|-------|-------|
+| **Description** | Verify user can add an airport to favorites |
+| **Preconditions** | Open Postman <br> Open collection "Airports" <br> User has no existing favorites or the test airport is not in favorites <br> Authentication is already configured with the valid Bearer Token |
+| **Test Data** | Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" } |
+| **Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/favorites <br> 4. In body tab select raw, select JSON and enter: { "airport_id": "GKA" } <br> 5. Click Send |
+| **Expected Result** | Status 201, favorite created |
+| **Actual Result** | Status 201 Created <br> Response includes the favorite airport |
 | **Status** | PASS |
 | **Priority** | HIGH |
 
