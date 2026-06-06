@@ -145,3 +145,16 @@
 | **Expected Result** | Status 401 Unauthorized|
 | **Actual Result** | Status 401, error message| 
 | **Status** | PASS |
+
+### API-TC-XX: GET /airports/distance — Same airport as origin and destination
+
+| Field | Value |
+|-------|-------|
+| **Description** | Verify behavior when requesting distance between the same airport |
+| **Preconditions** | Open Postman|
+| **Test Data**  |Method: GET, Url: https://airportgap.com/api/airports/distance?from=GKA&to=GKA |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=GKA&to=GKA <br> 5. Click Send |
+| **Expected Result** | 400 Bad Request with error message |
+| **Actual Result** | 200 OK with distance = 0 |
+| **Status** |FAIL |
+| **Note** | This is not a critical bug, but an  improvement opportunity |
