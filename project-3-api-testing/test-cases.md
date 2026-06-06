@@ -8,7 +8,6 @@
 |**Preconditions** |  Open Postman |
 | **Test Data** | Method: GET, Url: https://airportgap.com/api/airports |
 |**Steps** | 1. Open Postman <br> 2. Create a new collection named "Airports" <br> 3. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports <br> 5. Click Send |
-| **Headers** | 	Authorization Token 32MAXs3SX4oHVmWc5L74fbcG |
 | **Expected Result** | Status 200 OK <br> Response has data array <br> Each airport has id, type, attributes |
 | **Actual Result** | Status 200, array of airports | 
 | **Status** | PASS |
