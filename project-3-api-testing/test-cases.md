@@ -128,7 +128,7 @@
 |----|----|
 |**Description** | Verify error when deleting a favorite that doesn't exist |
 |**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/999 <br> <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
+| **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/999 <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
 |**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites/999 <br> 5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6. Click Send|
 | **Expected Result** | Status 404 Not Found |
 | **Actual Result** | Status 404 | 
