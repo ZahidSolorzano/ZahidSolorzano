@@ -37,31 +37,7 @@
 | **Actual Result** | Status 404 Not Found| 
 | **Status** | PASS |
 
-### API-TC-04: Calculate distance
-
-| Field | Value |
-|----|----|
-|**Description** | Verify distance between two airports is calculated correctly |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: POST, Url: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG |
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG <br> 5. Click Send |
-| **Expected Result** | Status 200,  distance calculated |
-| **Actual Result** | Status 200, Response includes distance in miles and kilometers| 
-| **Status** | PASS |
-
-### API-TC-05: Distance — Missing parameters
-
-| Field | Value |
-|----|----|
-|**Description** | Verify distance between two airports is calculated correctly |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: POST, Url: 	https://airportgap.com/api/airports/distance?from=GKA |
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=GKA <br> 5. Click Send |
-| **Expected Result** | Status 400 Bad Request <br> Error message explains missing parameter |
-| **Actual Result** | Status 400, error: "to parameter is required | 
-| **Status** | PASS |
-
-### API-TC-06: Add airport to favorites
+### API-TC-04: Add airport to favorites
 
 | Field | Value |
 |----|----|
@@ -73,7 +49,8 @@
 | **Actual Result** | Status 201 Created <br> Response includes the favorite airport| 
 | **Status** | PASS |
 
-### API-TC-07: Favorites - Add duplicate airport
+
+### API-TC-05: Favorites - Add duplicate airport
 
 | Field | Value |
 |----|----|
@@ -85,7 +62,7 @@
 | **Actual Result** | Status 422 Unprocessable Entity <br> Error: airport already in favorites| 
 | **Status** | PASS |
 
-### API-TC-08: Favorites — Missing airport_id
+### API-TC-06: Favorites — Missing airport_id
 
 | Field | Value |
 |----|----|
@@ -93,9 +70,34 @@
 |**Preconditions** |  Open Postman, Open collection "Airports" |
 | **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: {  }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
 |**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { } <br> 7. Click Send |
-| **Expected Result** | 	Status 400 Bad Request |
-| **Actual Result** | Status 422 (Unprocessable Entity)| 
+| **Expected Result** | 422 Unprocessable Entity|
+| **Actual Result** | Status 422 "Airport Please enter a valid airport code"| 
 | **Status** | PASS |
+
+
+### API-TC-07: Favorites — Wrong airport_id
+
+| Field | Value |
+|----|----|
+|**Description** | 	Verify error when airport_id is missing |
+|**Preconditions** |  Open Postman, Open collection "Airports" |
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "999" } <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { "airport_id": "999" } <br> 7. Click Send |
+| **Expected Result** | 422 Unprocessable Entity|
+| **Actual Result** | Status 422 "Airport Please enter a valid airport code"| 
+| **Status** | PASS |
+
+
+### API-TC-08: Favorites — Wrong field name
+| Field | Value |
+|----|----|
+|**Description** | 	Verify that the API returns a clear error message when the request body uses an incorrect field name instead of 'airport_id' |
+|**Preconditions** |  Open Postman, Open collection "Airports" |
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "wrong_field": "GKA" }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { "wrong_field": "GKA" } <br> 7. Click Send |
+| **Expected Result** | Status code: 422 Unprocessable Entity <br> Error message should clearly indicate that the field 'airport_id' is required and is missing|
+| **Actual Result** | Error message: "Airport Please enter a valid airport code"| 
+| **Status** | FAIL |
 
 ### API-TC-09: Get my favorite airports
 
@@ -139,21 +141,79 @@
 |----|----|
 |**Description** | Verify API rejects requests without valid token |
 |**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: GET, Url: https://airportgap.com/api/airports |
-|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports <br> 5. Click Send|
+| **Test Data**  |Method: GET <br> Url: https://airportgap.com/api/favorites |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. Click Send|
 | **Expected Result** | Status 401 Unauthorized|
 | **Actual Result** | Status 401, error message| 
 | **Status** | PASS |
 
-### API-TC-13: Distance — Same airport as origin and destination
+### API-TC-13: Calculate distance
+
+| Field | Value |
+|----|----|
+|**Description** | Verify distance between two airports is calculated correctly |
+|**Preconditions** |  Open Postman, Open collection "Airports" |
+| **Test Data**  |Method: POST, Url: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: 	https://airportgap.com/api/airports/distance?from=GKA&to=MAG <br> 5. Click Send |
+| **Expected Result** | Status 200,  distance calculated |
+| **Actual Result** | Status 200, Response includes distance in miles and kilometers| 
+| **Status** | PASS |
+
+### API-TC-14: Distance — Missing "to" parameter
+| Field | Value |
+|----|----|
+|**Description** | Verify that the API returns an error when the required "to" parameter is missing from the distance request |
+|**Preconditions** |  Open Postman, Open collection "Airports" |
+| **Test Data**  |Method: POST, Url: 	https://airportgap.com/api/airports/distance?from=GKA |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=GKA <br> 5. Click Send |
+| **Expected Result** | "Missing required parameter: to" |
+| **Actual Result** | "Please enter valid 'from' and 'to' airports"| 
+| **Status** | FAIL |
+
+### API-TC-15:  Distance — Missing "from" parameter
+
+| Field | Value |
+|----|----|
+|**Description** |  Verify that the API returns an error when the required "from" parameter is missing from the distance request |
+|**Preconditions** |  Open Postman, Open collection "Airports" |
+| **Test Data**  |Method: POST, Url: 	https://airportgap.com/api/airports/distance?to=GKA |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/airports/distance?to=GKA <br> 5. Click Send |
+| **Expected Result** | "Missing required parameter: from" |
+| **Actual Result** | "Please enter valid 'from' and 'to' airports"| 
+| **Status** | FAIL |
+
+### API-TC-16: Distance with the same airport as origin and destination
 
 | Field | Value |
 |-------|-------|
 | **Description** | Verify behavior when requesting distance between the same airport |
 |**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  | Method: GET, Url: https://airportgap.com/api/airports/distance?from=GKA&to=GKA |
-|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=GKA&to=GKA <br> 5. Click Send |
+| **Test Data**  | Method: POST, Url: https://airportgap.com/api/airports/distance?from=GKA&to=GKA |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=GKA&to=GKA <br> 5. Click Send |
 | **Expected Result** | 200 OK with distance = 0  |
 | **Actual Result** | 200 OK with distance = 0 |
 | **Status** | PASS |
 
+### API-TC-17: Distance with non-existent airport code (in "from" airpot)
+
+| Field | Value |
+|-------|-------|
+| **Description** | Verify that requesting distance with a non-existent airport code returns appropriate error|
+|**Preconditions** |  Open Postman, Open collection "Airports" |
+| **Test Data**  | Method: POST, Url: https://airportgap.com/api/airports/distance?from=999&to=GKA |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=999&to=GKA <br> 5. Click Send |
+| **Expected Result** | Error message should specify which parameter is invalid |
+| **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
+| **Status** | FAIL |
+
+### API-TC-18: Distance with non-existent airport code (in "to" airpot)
+
+| Field | Value |
+|-------|-------|
+| **Description** | Verify that requesting distance with a non-existent airport code returns appropriate error|
+|**Preconditions** |  Open Postman, Open collection "Airports" |
+| **Test Data**  | Method: POST, Url: https://airportgap.com/api/airports/distance?from=GKA&to=999 |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/airports/distance?from=GKA&to=999 <br> 5. Click Send |
+| **Expected Result** | Error message should specify which parameter is invalid |
+| **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
+| **Status** | FAIL |
