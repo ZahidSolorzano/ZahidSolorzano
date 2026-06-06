@@ -1,4 +1,4 @@
-# Test Cases - Airport Gap Funcionality
+# Test Cases - Airport Gap Functionality
 
 ### API-TC-01: Gets all airports
 
@@ -7,10 +7,11 @@
 |**Description** | Verify that GET /airports returns a list of airports |
 |**Preconditions** |  Open Postman |
 | **Test Data** | Method: GET, Url: https://airportgap.com/api/airports |
-|**Steps** | 1. Open Postman <br> 2. Create a new collection named "Airports" <br> 3. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports <br> 5. Click Send |
+|**Steps** | 1. Open Postman <br> 2. Create a new collection named "Airports" <br> 3. Create a new request <br> 4. Set method to GET <br> 5. Enter URL: https://airportgap.com/api/airports <br> 6. Click Send |
 | **Expected Result** | Status 200 OK <br> Response has data array <br> Each airport has id, type, attributes |
 | **Actual Result** | Status 200, array of airports | 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 ### API-TC-02: Get a specific airport
 
@@ -23,6 +24,7 @@
 | **Expected Result** | Status 200 <br> Airport id = "GKA" <br> Name contains "Goroka" |
 | **Actual Result** | Status 200, id=GKA, name="Goroka Airport"| 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 ### API-TC-03: Airport not found
 
@@ -35,18 +37,20 @@
 | **Expected Result** | Status 404 Not Found |
 | **Actual Result** | Status 404 Not Found| 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 ### API-TC-04: Add airport to favorites
 
 | Field | Value |
 |----|----|
 |**Description** | 	Verify user can add an airport to favorites |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
+|**Preconditions** |  Open Postman <br> Open collection "Airports" <br> User has no existing favorites or the test airport is not in favorites |
 | **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { "airport_id": "GKA" } <br> 7. Click Send |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { "airport_id": "GKA" } <br> 7. Click Send |
 | **Expected Result** | 	Status 201, favorite created |
 | **Actual Result** | Status 201 Created <br> Response includes the favorite airport| 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 
 ### API-TC-05: Favorites - Add duplicate airport
@@ -56,10 +60,11 @@
 |**Description** | 	Verify adding same airport twice returns error |
 |**Preconditions** |  Open Postman, Open collection "Airports" |
 | **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { "airport_id": "GKA" } <br> 7. Click Send |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { "airport_id": "GKA" } <br> 7. Click Send |
 | **Expected Result** | Status 422, error message |
 | **Actual Result** | Status 422 Unprocessable Entity <br> Error: airport already in favorites| 
 | **Status** | PASS |
+| **Priority** | HIGH  |
 
 ### API-TC-06: Favorites — Missing airport_id
 
@@ -68,24 +73,25 @@
 |**Description** | 	Verify error when airport_id is missing |
 |**Preconditions** |  Open Postman, Open collection "Airports" |
 | **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: {  }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { } <br> 7. Click Send |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { } <br> 7. Click Send |
 | **Expected Result** | 422 Unprocessable Entity|
 | **Actual Result** | Status 422 "Airport Please enter a valid airport code"| 
 | **Status** | PASS |
+| **Priority** | MEDIUM |
 
 
 ### API-TC-07: Favorites — Wrong airport_id
 
 | Field | Value |
 |----|----|
-|**Description** | 	Verify error when airport_id is missing |
+|**Description** | 	Verify error when airport_id is invalid|
 |**Preconditions** |  Open Postman, Open collection "Airports" |
 | **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "999" } <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { "airport_id": "999" } <br> 7. Click Send |
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { "airport_id": "999" } <br> 7. Click Send |
 | **Expected Result** | 422 Unprocessable Entity|
 | **Actual Result** | Status 422 "Airport Please enter a valid airport code"| 
 | **Status** | PASS |
-
+| **Priority** |  MEDIUM |
 
 ### API-TC-08: Favorites — Wrong field name
 | Field | Value |
@@ -96,7 +102,8 @@
 |**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { "wrong_field": "GKA" } <br> 7. Click Send |
 | **Expected Result** | Status code: 422 Unprocessable Entity <br> Error message should clearly indicate that the field 'airport_id' is required and is missing|
 | **Actual Result** | Error message: "Airport Please enter a valid airport code"| 
-| **Status** | FAIL |
+| **Status** |  MEDIUM |
+| **Priority** | LOW|
 
 ### API-TC-09: Get my favorite airports
 
@@ -109,6 +116,7 @@
 | **Expected Result** | Status 200, Response includes previously added favorites|
 | **Actual Result** | Status 200, includes GKA | 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 ### API-TC-10: Remove favorite
 
@@ -117,10 +125,11 @@
 |**Description** | Verify user can delete a favorite airport |
 |**Preconditions** |  Open Postman, Open collection "Airports" |
 | **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/GKA  <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL:https://airportgap.com/api/favorites/GKA <br> 5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6. Click Send|
+|**Steps** | 1. Create a new request <br> 3. Set method to DELETE <br> 4. Enter URL:https://airportgap.com/api/favorites/GKA <br> 5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6. Click Send|
 | **Expected Result** | Status 204 No Content|
 | **Actual Result** | Status 204 | 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 ### API-TC-11: Delete non-existent favorite
 
@@ -133,6 +142,7 @@
 | **Expected Result** | Status 404 Not Found |
 | **Actual Result** | Status 404 | 
 | **Status** | PASS |
+| **Priority** | MEDIUM |
 
 ### API-TC-12: Request without authentication token
 
@@ -145,6 +155,7 @@
 | **Expected Result** | Status 401 Unauthorized|
 | **Actual Result** | Status 401, error message| 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 ### API-TC-13: Calculate distance
 
@@ -157,6 +168,7 @@
 | **Expected Result** | Status 200,  distance calculated |
 | **Actual Result** | Status 200, Response includes distance in miles and kilometers| 
 | **Status** | PASS |
+| **Priority** | HIGH |
 
 ### API-TC-14: Distance — Missing "to" parameter
 | Field | Value |
@@ -168,6 +180,7 @@
 | **Expected Result** | "Missing required parameter: to" |
 | **Actual Result** | "Please enter valid 'from' and 'to' airports"| 
 | **Status** | FAIL |
+| **Priority** | MEDIUM |
 
 ### API-TC-15:  Distance — Missing "from" parameter
 
@@ -180,6 +193,7 @@
 | **Expected Result** | "Missing required parameter: from" |
 | **Actual Result** | "Please enter valid 'from' and 'to' airports"| 
 | **Status** | FAIL |
+| **Priority** | MEDIUM |
 
 ### API-TC-16: Distance with the same airport as origin and destination
 
@@ -192,6 +206,7 @@
 | **Expected Result** | 200 OK with distance = 0  |
 | **Actual Result** | 200 OK with distance = 0 |
 | **Status** | PASS |
+| **Priority** | LOW |
 
 ### API-TC-17: Distance with non-existent airport code (in "from" airpot)
 
@@ -204,6 +219,7 @@
 | **Expected Result** | Error message should specify which parameter is invalid |
 | **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
 | **Status** | FAIL |
+| **Priority** | mEDIUM |
 
 ### API-TC-18: Distance with non-existent airport code (in "to" airpot)
 
@@ -216,3 +232,4 @@
 | **Expected Result** | Error message should specify which parameter is invalid |
 | **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
 | **Status** | FAIL |
+| **Priority** | MEDIUM |
