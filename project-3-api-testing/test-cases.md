@@ -2,7 +2,7 @@
 
 ## Setup: Obtaining an Authentication Token
 
-**Steps to get your token:**
+**Steps to get and add your token:**
 
 1. Go to https://airportgap.com
 2. Click Generate Token
