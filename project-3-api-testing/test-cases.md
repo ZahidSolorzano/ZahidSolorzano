@@ -1,6 +1,6 @@
 ## Test Cases
 
-### API-TC-01: GET /airports — Gets all airports
+### API-TC-01: Gets all airports
 
 | Field | Value |
 |----|----|
@@ -13,7 +13,7 @@
 | **Actual Result** | Status 200, array of airports | 
 | **Status** | PASS |
 
-### API-TC-02: GET /airports/:id - Get a specific airport
+### API-TC-02: Get a specific airport
 
 | Field | Value |
 |----|----|
@@ -25,7 +25,7 @@
 | **Actual Result** | Status 200, id=GKA, name="Goroka Airport"| 
 | **Status** | PASS |
 
-### API-TC-03: GET /airports/:id — Airport not found
+### API-TC-03: Airport not found
 
 | Field | Value |
 |----|----|
@@ -37,7 +37,7 @@
 | **Actual Result** | Status 404 Not Found| 
 | **Status** | PASS |
 
-### API-TC-04: GET /airports/distance — Calculate distance
+### API-TC-04: Calculate distance
 
 | Field | Value |
 |----|----|
@@ -49,7 +49,7 @@
 | **Actual Result** | Status 200, Response includes distance in miles and kilometers| 
 | **Status** | PASS |
 
-### API-TC-05: GET /airports/distance — Missing parameters
+### API-TC-05: Distance — Missing parameters
 
 | Field | Value |
 |----|----|
@@ -61,7 +61,7 @@
 | **Actual Result** | Status 400, error: "to parameter is required | 
 | **Status** | PASS |
 
-### API-TC-06: POST /favorites — Add airport to favorites
+### API-TC-06: Add airport to favorites
 
 | Field | Value |
 |----|----|
@@ -73,7 +73,7 @@
 | **Actual Result** | Status 201 Created <br> Response includes the favorite airport| 
 | **Status** | PASS |
 
-### API-TC-07: POST /favorites — Add duplicate airport
+### API-TC-07: Favorites - Add duplicate airport
 
 | Field | Value |
 |----|----|
@@ -85,7 +85,7 @@
 | **Actual Result** | Status 422 Unprocessable Entity <br> Error: airport already in favorites| 
 | **Status** | PASS |
 
-### API-TC-08: POST /favorites — Missing airport_id
+### API-TC-08: Favorites — Missing airport_id
 
 | Field | Value |
 |----|----|
@@ -97,7 +97,7 @@
 | **Actual Result** | Status 422 (Unprocessable Entity)| 
 | **Status** | PASS |
 
-### API-TC-09: GET /favorites — Get my favorite airports
+### API-TC-09: Get my favorite airports
 
 | Field | Value |
 |----|----|
@@ -109,7 +109,7 @@
 | **Actual Result** | Status 200, includes GKA | 
 | **Status** | PASS |
 
-### API-TC-10: DELETE /favorites/:id — Remove favorite
+### API-TC-10: Remove favorite
 
 | Field | Value |
 |----|----|
@@ -121,7 +121,7 @@
 | **Actual Result** | Status 204 | 
 | **Status** | PASS |
 
-### API-TC-11: DELETE /favorites/:id — Delete non-existent favorite
+### API-TC-11: Delete non-existent favorite
 
 | Field | Value |
 |----|----|
@@ -145,7 +145,7 @@
 | **Actual Result** | Status 401, error message| 
 | **Status** | PASS |
 
-### API-TC-13: GET /airports/distance — Same airport as origin and destination
+### API-TC-13: Distance — Same airport as origin and destination
 
 | Field | Value |
 |-------|-------|
