@@ -10,7 +10,7 @@
 | **Test Data** | Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "wrong_field": "GKA" } <br> Authentication Token "32MAXs3SX4oHVmWc5L74fbcG" |
 | **Steps** | 1. Create a new HTTP request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/favorites <br> 4. In Authentication tab, select Bearer token type and enter "32MAXs3SX4oHVmWc5L74fbcG" <br> 5. In body tab select raw, select JSON an enter: { "wrong_field": "GKA" } <br> 6. Click Send  |
 | **Expected Result** | Error message should indicate: "Required field airport_id is missing" |
-| **Actual Result** | Error message: "Please enter a valid airport code" |
+| **Actual Result** | Status 422, Error message: "Please enter a valid airport code" |
 | **Environment** | Windows 10, Postman v12.13.6  |
 | **Severity** | Low |
 | **Priority** | Low |
@@ -34,6 +34,7 @@
 | **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
+| **Evidence** | ![to-missing](./evidence/to-missing.png) |
 
 ### API-BUG-03: Ambiguous error message for distance endpoint (Missing "from" parameter)
 
