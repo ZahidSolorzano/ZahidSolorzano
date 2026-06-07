@@ -63,7 +63,19 @@ Testing will be considered complete when:
 | DELETE | /favorites/:id | Remove airport from favorites |
 
 ## Authentication
-Some requests require a token: 32MAXs3SX4oHVmWc5L74fbcG
+Some requests require a token
+
+**Steps to get and add the token:**
+
+1. Go to https://airportgap.com
+2. Click Generate Token
+3. Enter Email "examplezahid@test.com"
+4. Enter Password "portfolio"
+5. Complete Captcha
+6. Copy provided token
+7. In Postman, in the authentication tab
+   - Auth type: `Bearer Token`
+   - Token: `32MAXs3SX4oHVmWc5L74fbcG`
 
 ## Test Environment
 | Component | Details |
