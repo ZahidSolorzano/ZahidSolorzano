@@ -8,8 +8,9 @@
 2. Click Generate Token
 3. Enter Email "examplezahid@test.com"
 4. Enter Password "portfolio"
-5. Copy provided token (32MAXs3SX4oHVmWc5L74fbcG)
-6. In Postman, in the authentication tab
+5. Complete Captcha
+6. Copy provided token (32MAXs3SX4oHVmWc5L74fbcG)
+7. In Postman, in the authentication tab
    - Auth type: `Bearer Token`
    - Token: `32MAXs3SX4oHVmWc5L74fbcG`
 
