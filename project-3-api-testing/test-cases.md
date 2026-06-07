@@ -125,7 +125,7 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify GET /favorites returns list of user's favorite airports |
-|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> User has already added at least one airport to the favorites list <br> Authentication is already configured with the valid Bearer Token|
 | **Test Data**  |Method: GET <br> Url: https://airportgap.com/api/favorites |
 |**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. Click Send|
 | **Expected Result** | Status 200, Response includes previously added favorites|
