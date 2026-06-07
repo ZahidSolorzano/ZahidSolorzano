@@ -21,7 +21,7 @@
 |----|----|
 |**Description** | Verify that GET /airports returns a list of airports |
 |**Preconditions** |  Open Postman |
-| **Test Data** | Method: GET, Url: https://airportgap.com/api/airports |
+| **Test Data** | Method: GET<br>Url: https://airportgap.com/api/airports |
 |**Steps** | 1. Open Postman <br> 2. Create a new collection named "Airports" <br> 3. Create a new request <br> 4. Set method to GET <br> 5. Enter URL: https://airportgap.com/api/airports <br> 6. Click Send |
 | **Expected Result** | Status 200 OK <br> Response has data array <br> Each airport has id, type, attributes |
 | **Actual Result** | Status 200, array of airports | 
@@ -33,8 +33,8 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify GET /airports/GKA returns Goroka Airport |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data** | Method: GET, Url: https://airportgap.com/api/airports/GKA |
+|**Preconditions** |  Open Postman <br> Open collection "Airports" |
+| **Test Data** | Method: GET<br> Url: https://airportgap.com/api/airports/GKA |
 |**Steps** | 1. Open Postman <br> 2. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports/GKA <br> 5. Click Send |
 | **Expected Result** | Status 200 <br> Airport id = "GKA" <br> Name contains "Goroka" |
 | **Actual Result** | Status 200, id=GKA, name="Goroka Airport"| 
@@ -46,9 +46,9 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify GET with invalid airport ID returns 404 |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: GET, Url: https://airportgap.com/api/airports/XYZ123 |
-|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/airports/XYZ123 <br> 5. Click Send|
+|**Preconditions** |  Open Postman <br> Open collection "Airports" |
+| **Test Data**  |Method: GET<br>Url: https://airportgap.com/api/airports/XYZ123 |
+|**Steps** | 1. Create a new request <br> 2. Set method to GET <br> 3. Enter URL: https://airportgap.com/api/airports/XYZ123 <br> 4. Click Send|
 | **Expected Result** | Status 404 Not Found |
 | **Actual Result** | Status 404 Not Found| 
 | **Status** | PASS |
@@ -73,9 +73,9 @@
 | Field | Value |
 |----|----|
 |**Description** | 	Verify adding same airport twice returns error |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { "airport_id": "GKA" } <br> 7. Click Send |
+|**Preconditions** |  Open Postman <br> Open collection "Airports" <br> User has already added aiport "GKA" to the favorites list <br> Authentication is already configured with the valid Bearer Token |
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "GKA" }|
+|**Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/favorites <br> 4. In body tab select raw, select JSON and enter: { "airport_id": "GKA" } <br> 5. Click Send |
 | **Expected Result** | Status 422, error message |
 | **Actual Result** | Status 422 Unprocessable Entity <br> Error: airport already in favorites| 
 | **Status** | PASS |
@@ -86,9 +86,9 @@
 | Field | Value |
 |----|----|
 |**Description** | 	Verify error when airport_id is missing |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: {  }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { } <br> 7. Click Send |
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: {  }|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. In body tab select raw, select JSON and enter: { } <br> 6. Click Send |
 | **Expected Result** | 422 Unprocessable Entity|
 | **Actual Result** | Status 422 "Airport Please enter a valid airport code"| 
 | **Status** | PASS |
@@ -100,9 +100,9 @@
 | Field | Value |
 |----|----|
 |**Description** | 	Verify error when airport_id is invalid|
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "999" } <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In authorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON and enter: { "airport_id": "999" } <br> 7. Click Send |
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "999" }|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. In body tab select raw, select JSON and enter: { "airport_id": "999" } <br> 6. Click Send |
 | **Expected Result** | 422 Unprocessable Entity|
 | **Actual Result** | Status 422 "Airport Please enter a valid airport code"| 
 | **Status** | PASS |
@@ -112,9 +112,9 @@
 | Field | Value |
 |----|----|
 |**Description** | 	Verify that the API returns a clear error message when the request body uses an incorrect field name instead of 'airport_id' |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "wrong_field": "GKA" }<br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br>  5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6.In body tab select raw, select JSON an enter: { "wrong_field": "GKA" } <br> 7. Click Send |
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+| **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "wrong_field": "GKA" }|
+|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. In body tab select raw, select JSON an enter: { "wrong_field": "GKA" } <br> 6. Click Send |
 | **Expected Result** | Status code: 422 Unprocessable Entity <br> Error message should clearly indicate that the field 'airport_id' is required and is missing|
 | **Actual Result** | Error message: "Airport Please enter a valid airport code"| 
 | **Status** |  MEDIUM |
@@ -125,9 +125,9 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify GET /favorites returns list of user's favorite airports |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: GET <br> Url: https://airportgap.com/api/favorites <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6. Click Send|
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+| **Test Data**  |Method: GET <br> Url: https://airportgap.com/api/favorites |
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. Click Send|
 | **Expected Result** | Status 200, Response includes previously added favorites|
 | **Actual Result** | Status 200, includes GKA | 
 | **Status** | PASS |
@@ -138,9 +138,9 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify user can delete a favorite airport |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/GKA  <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to DELETE <br> 4. Enter URL:https://airportgap.com/api/favorites/GKA <br> 5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6. Click Send|
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+| **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/GKA |
+|**Steps** | 1. Create a new request <br> 3. Set method to DELETE <br> 4. Enter URL:https://airportgap.com/api/favorites/GKA <br> 5. Click Send|
 | **Expected Result** | Status 204 No Content|
 | **Actual Result** | Status 204 | 
 | **Status** | PASS |
@@ -151,9 +151,9 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify error when deleting a favorite that doesn't exist |
-|**Preconditions** |  Open Postman, Open collection "Airports" |
-| **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/999 <br> Authorization Token: 32MAXs3SX4oHVmWc5L74fbcG|
-|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites/999 <br> 5. In autorization tab, select bearer token and enter 32MAXs3SX4oHVmWc5L74fbcG <br> 6. Click Send|
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+| **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/999|
+|**Steps** | 1. Create a new request <br> 3. Set method to GET <br> 4. Enter URL: https://airportgap.com/api/favorites/999 <br> 5. Click Send|
 | **Expected Result** | Status 404 Not Found |
 | **Actual Result** | Status 404 | 
 | **Status** | PASS |
