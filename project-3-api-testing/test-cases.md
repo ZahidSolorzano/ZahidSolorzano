@@ -117,8 +117,9 @@
 |**Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/favorites <br> 4. In body tab select raw, select JSON an enter: { "wrong_field": "GKA" } <br> 5. Click Send |
 | **Expected Result** | Status code: 422 Unprocessable Entity <br> Error message should clearly indicate that the field 'airport_id' is required and is missing|
 | **Actual Result** | Error message: "Airport Please enter a valid airport code"| 
-| **Status** |  MEDIUM |
-| **Priority** | LOW|
+| **Status** |  FAIL |
+| **Priority** | LOW |
+| **Bug reference** | API-BUG-01 |
 
 ### API-TC-09: Get my favorite airports
 
@@ -196,6 +197,7 @@
 | **Actual Result** | "Please enter valid 'from' and 'to' airports"| 
 | **Status** | FAIL |
 | **Priority** | MEDIUM |
+| **Bug reference** | API-BUG-02 |
 
 ### API-TC-15:  Distance — Missing "from" parameter
 
@@ -209,6 +211,7 @@
 | **Actual Result** | "Please enter valid 'from' and 'to' airports"| 
 | **Status** | FAIL |
 | **Priority** | MEDIUM |
+| **Bug reference** | API-BUG-03 |
 
 ### API-TC-16: Distance with the same airport as origin and destination
 
@@ -234,7 +237,8 @@
 | **Expected Result** | Error message should specify which parameter is invalid |
 | **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
 | **Status** | FAIL |
-| **Priority** | mEDIUM |
+| **Priority** | MEDIUM |
+| **Bug reference** | API-BUG-04 |
 
 ### API-TC-18: Distance with non-existent airport code (in "to" airpot)
 
@@ -248,3 +252,4 @@
 | **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
 | **Status** | FAIL |
 | **Priority** | MEDIUM |
+| **Bug reference** | API-BUG-05 |
