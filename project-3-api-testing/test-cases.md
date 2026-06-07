@@ -108,10 +108,10 @@
 | **Status** | PASS |
 | **Priority** |  MEDIUM |
 
-### API-TC-08: Favorites — Wrong field name
+### API-TC-08: Favorites - Wrong field name
 | Field | Value |
 |----|----|
-|**Description** | 	Verify that the API returns a clear error message when the request body uses an incorrect field name instead of 'airport_id' |
+|**Description** | 	Verify that the API returns a clear error message when the request body uses an incorrect field name instead of "airport_id" |
 |**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
 | **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "wrong_field": "GKA" }|
 |**Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/favorites <br> 4. In body tab select raw, select JSON an enter: { "wrong_field": "GKA" } <br> 5. Click Send |
@@ -186,12 +186,12 @@
 | **Status** | PASS |
 | **Priority** | HIGH |
 
-### API-TC-14: Distance — Missing "to" parameter
+### API-TC-14: Distance - Missing "to" parameter
 | Field | Value |
 |----|----|
 |**Description** | Verify that the API returns an error when the required "to" parameter is missing from the distance request |
 |**Preconditions** |  Open Postman <br>  Open collection "Airports" |
-| **Test Data**  |Method: POST <br>  Url: 	https://airportgap.com/api/airports/distance?from=GKA |
+| **Test Data**  |Method: POST <br>  Url: https://airportgap.com/api/airports/distance?from=GKA |
 |**Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/airports/distance?from=GKA <br> 4. Click Send |
 | **Expected Result** | "Missing required parameter: to" |
 | **Actual Result** | "Please enter valid 'from' and 'to' airports"| 
@@ -199,7 +199,7 @@
 | **Priority** | MEDIUM |
 | **Bug reference** | API-BUG-02 |
 
-### API-TC-15:  Distance — Missing "from" parameter
+### API-TC-15:  Distance - Missing "from" parameter
 
 | Field | Value |
 |----|----|
@@ -226,7 +226,22 @@
 | **Status** | PASS |
 | **Priority** | LOW |
 
-### API-TC-17: Distance with non-existent airport code (in "from" airpot)
+### API-TC-17: Distance with invalid airport code (in "to" parameter)
+
+| Field | Value |
+|-------|-------|
+| **Description** | Verify that requesting distance with a non-existent airport code returns appropriate error|
+|**Preconditions** |  Open Postman <br>  Open collection "Airports" |
+| **Test Data**  | Method: POST <br>  Url: https://airportgap.com/api/airports/distance?from=GKA&to=999 |
+|**Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/airports/distance?from=GKA&to=999 <br> 4. Click Send |
+| **Expected Result** | Error message should specify which parameter is invalid |
+| **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
+| **Status** | FAIL |
+| **Priority** | MEDIUM |
+| **Bug reference** | API-BUG-05 |
+
+
+### API-TC-18: Distance with invalid airport code (in "from" parameter)
 
 | Field | Value |
 |-------|-------|
@@ -240,16 +255,3 @@
 | **Priority** | MEDIUM |
 | **Bug reference** | API-BUG-04 |
 
-### API-TC-18: Distance with non-existent airport code (in "to" airpot)
-
-| Field | Value |
-|-------|-------|
-| **Description** | Verify that requesting distance with a non-existent airport code returns appropriate error|
-|**Preconditions** |  Open Postman <br>  Open collection "Airports" |
-| **Test Data**  | Method: POST <br>  Url: https://airportgap.com/api/airports/distance?from=GKA&to=999 |
-|**Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/airports/distance?from=GKA&to=999 <br> 4. Click Send |
-| **Expected Result** | Error message should specify which parameter is invalid |
-| **Actual Result** | "422 state, Generic message: "Please enter valid 'from' and 'to' airports"|
-| **Status** | FAIL |
-| **Priority** | MEDIUM |
-| **Bug reference** | API-BUG-05 |
