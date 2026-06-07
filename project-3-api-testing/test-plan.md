@@ -27,6 +27,7 @@ Ensure that all endpoints work as expected under normal conditions.Confirm that 
 - Performance or Load testing
 - Security testing beyond authentication
 - API Documentation
+- Automated testing 
 
 ## Team
 Since this is a personal project meant to show my software testing skills, the only person involved is Zahid Solorzano.
@@ -37,9 +38,18 @@ Since this is a personal project meant to show my software testing skills, the o
 |------------|------------|-----------------|---------------------|
 | System testing, Integration testing | Functional, Negative, Authentication, Error handling | Equivalence Partitioning, Boundary Value Analysis, Positive/Negative testing, Schema validation | Manual (Postman) |
 
-# Criteria
-The test execution will start as soon as all the test cases are designed and reviewed and the test environment is ready.
-The test will be considered completed when all planned test cases have been executed, all found defects has been documented, the evidence has been captured and this test plan has been completed
+## Start Criteria
+Test execution will begin when:
+- All test cases are designed and reviewed
+- Postman is installed and configured
+- A valid authentication token is obtained
+
+## Exit Criteria
+Testing will be considered complete when:
+- All planned test cases have been executed
+- All found defects have been documented
+- Evidence has been captured
+- This test plan has been completed
 
 ## Endpoints to Test
 
