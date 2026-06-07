@@ -102,7 +102,7 @@
 |**Description** | 	Verify error when airport_id is invalid|
 |**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
 | **Test Data**  |Method: POST <br> Url: https://airportgap.com/api/favorites <br> Body: { "airport_id": "999" }|
-|**Steps** | 1. Create a new request <br> 3. Set method to POST <br> 4. Enter URL: https://airportgap.com/api/favorites <br> 5. In body tab select raw, select JSON and enter: { "airport_id": "999" } <br> 6. Click Send |
+|**Steps** | 1. Create a new request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/favorites <br> 4. In body tab select raw, select JSON and enter: { "airport_id": "999" } <br> 5. Click Send |
 | **Expected Result** | 422 Unprocessable Entity|
 | **Actual Result** | Status 422 "Airport Please enter a valid airport code"| 
 | **Status** | PASS |
@@ -138,7 +138,7 @@
 | Field | Value |
 |----|----|
 |**Description** | Verify user can delete a favorite airport |
-|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> Authentication is already configured with the valid Bearer Token|
+|**Preconditions** |  Open Postman<br> Open collection "Airports" <br> User has already added at least one airport to the favorites list <br>Authentication is already configured with the valid Bearer Token|
 | **Test Data**  |Method: DELETE <br> Url: https://airportgap.com/api/favorites/GKA |
 |**Steps** | 1. Create a new request <br> 3. Set method to DELETE <br> 4. Enter URL:https://airportgap.com/api/favorites/GKA <br> 5. Click Send|
 | **Expected Result** | Status 204 No Content|
