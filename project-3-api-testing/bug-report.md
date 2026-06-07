@@ -16,7 +16,7 @@
 | **Priority** | Low |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
-| **Evidence** | ![first-name-no-limits](./evidence/first-name-no-limits.png) |
+| **Evidence** | ![wrong-field](./evidence/wrong-field.png) |
 
 ### API-BUG-02: Ambiguous error message for distance endpoint (Missing "to" parameter)
 
