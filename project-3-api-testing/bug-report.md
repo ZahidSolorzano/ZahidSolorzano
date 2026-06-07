@@ -28,7 +28,7 @@
 | **Test Data** |Method: POST <br>  Url: 	https://airportgap.com/api/airports/distance?from=GKA |
 | **Steps** |  1. Create a new HTTP request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/airports/distance?from=GKA <br> 4. Click Send  |
 | **Expected Result** | Error message should specify which parameter is missing (Missing airport code for "to" parameter)  |
-| **Actual Result** | Generic message: "Please enter valid 'from' and 'to' airports"  |
+| **Actual Result** | Status 422, Generic message: "Please enter valid 'from' and 'to' airports"  |
 | **Environment** |Windows 10, Postman v12.13.6   |
 | **Severity** | Low |
 | **Priority** | Medium |
@@ -46,12 +46,13 @@
 | **Test Data** |Method: POST <br>  Url: 	https://airportgap.com/api/airports/distance?to=GKA |
 | **Steps** |  1. Create a new HTTP request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/airports/distance?to=GKA <br> 4. Click Send  |
 | **Expected Result** | Error message should specify which parameter is missing (Missing airport code for "from" parameter)  |
-| **Actual Result** | Error message: "Please enter valid 'from' and 'to' airports" |
+| **Actual Result** | Status 422, Generic message: "Please enter valid 'from' and 'to' airports" |
 | **Environment** |Windows 10, Postman v12.13.6  |
 | **Severity** | Low |
 | **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
+| **Evidence** | ![from-missing](./evidence/from-missing.png) |
 
 ### API-BUG-04: Ambiguous error message for distance endpoint (Invalid "to" parameter)
 
@@ -60,15 +61,16 @@
 | **Test Case** | API-TC-17: Distance with invalid airport code (in "to" parameter) |
 | **Description** | When one of the airport codes is invalid, the API returns an error message that mentions both 'from' and 'to' airports, without specifying which one is invalid |
 | **Preconditions** |Open Postman<br> Open collection "Airports" |
-| **Test Data** |Method: POST <br>  Url: 	https://airportgap.com/api/airports/distance?from=GKA&to=999 |
+| **Test Data** |Method: POST <br>  Url: https://airportgap.com/api/airports/distance?from=GKA&to=999 |
 | **Steps** |  1. Create a new HTTP request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/airports/distance?from=GKA&to=999 <br> 4. Click Send  |
 | **Expected Result** | Error message should specify which parameter is invalid (Invalid airport code for "to" parameter)  |
-| **Actual Result** | Generic message: "Please enter valid 'from' and 'to' airports"  |
+| **Actual Result** | Status 422, Generic message: "Please enter valid 'from' and 'to' airports"  |
 | **Environment** |Windows 10, Postman v12.13.6   |
 | **Severity** | Low |
 | **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
+| **Evidence** | ![to-invalid](./evidence/to-invalid.png) |
 
 ### API-BUG-05: Distance with invalid airport code (in "from" parameter)
 
@@ -80,9 +82,10 @@
 | **Test Data** |Method: POST <br>  Url: 	https://airportgap.com/api/airports/distance?from=999&to=GKA |
 | **Steps** |  1. Create a new HTTP request <br> 2. Set method to POST <br> 3. Enter URL: https://airportgap.com/api/airports/distance?from=999&to=GKA <br> 4. Click Send  |
 | **Expected Result** | Error message should specify which parameter is invalid (Invalid airport code for "from" parameter)  |
-| **Actual Result** | Error message: "Please enter valid 'from' and 'to' airports" |
+| **Actual Result** | Status 422, Generic message: "Please enter valid 'from' and 'to' airports" |
 | **Environment** |Windows 10, Postman v12.13.6  |
 | **Severity** | Low |
 | **Priority** | Medium |
 | **Status** | Open |
 | **Reported By** | Zahid Solorzano |
+| **Evidence** | ![from-invalid](./evidence/from-invalid.png) |
