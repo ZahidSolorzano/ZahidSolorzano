@@ -65,6 +65,19 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 📄 [View test cases](./project-2-registration/test-cases.md)  
 🐞 [View bug reports](./project-2-registration/bug-report.md)
 
+### Project 3: Airport Gap API Testing
+**Application:** Airport Gap API (RESTful)  
+**Tool:** Postman  
+**Goal:** Validate API functionality for airports, distance calculation, and favorites management
+
+- ✅ Created 18 API test cases
+- 🐞 Found and reported 5 bugs 
+- 🔑 Tested authentication (Bearer Token)
+
+🎫 [View test plan](./project-3-api-testing/test-plan.md)
+📄 [View test cases](./project-3-api-testing/test-cases.md)  
+🐞 [View bug reports](./project-3-api-testing/bug-report.md)
+
 ### Equipment Loan Tracking System - CFE
 *PHP, MySQL, HTML, XAMPP | University Professional Practices*
 
