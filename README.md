@@ -1,6 +1,6 @@
 # Zahid Solorzano | Portfolio
 
-**Aspiring:** Junior Tester | Scheduler | Logistics Coordinator
+**Aspiring:** Junior QA Tester | Manual Testing
 
 ## Links
 [![My CV](https://img.shields.io/badge/my_cV-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://drive.google.com/file/d/1xd0IRN7RXRMKVc1aODzZzS6cJIr-7Vdg/view?usp=sharing)
@@ -23,19 +23,12 @@ I'm a Computer Systems Engineer with a strong foundation in programming (Java, P
 - ✅ Remote work experience
 - ✅ Technical background 
 
-## Core Competencies
-- Test case design & execution
-- Bug reporting & documentation
-- Attention to detail (HIPAA compliance)
-- Proactive follow-up & task ownership
-- Remote work discipline (4+ years)
-
 ## Technical Toolkit
 | Category | Tools & Technologies |
 |----------|----------------------|
-| QA & Tracking | Jira, Trello, Excel, Google Sheets |
+| QA & Tracking | Jira, Trello, Excel, Postman |
 | Development | Java, PHP, HTML, CSS, SQL, MySQL |
-| Dev Environment | VS Code, Android Studio, NetBeans, XAMPP |
+| Dev Environment | VS Code, Android Studio, Apache NetBeans, XAMPP |
 | Version Control | Git, GitHub |
 | Communication | Zendesk, Five9| 
 
